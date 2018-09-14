@@ -1,28 +1,57 @@
-\documentclass[a4paper, 11pt, ngerman]{scrreprt}
+\documentclass[
+a4paper, 
+11pt, 
+ngerman,
+listof=totoc,
+%bibliography=totoc,
+bibliography=totocnumbered
+]{scrreprt}
+
+
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 
-\title{W-Seminar-Arbeit}
+\usepackage[
+backend=biber,
+style=authoryear-ibid,
+%sorting=ynt
+]{biblatex}
+\addbibresource{gravitropismus-bibliography.bib}
 
-%\usepackage{biblatex}
-%\addbibresource{bibliography.bib}
+\title{Untersuchung von Gravitropismus bei \emph{Lepidium sativum} mit einem selbstgebautem Klinostat unter Zimmerbedingungen}
+
+\subtitle{W-Seminararbeit im Fach Biologie am Luitpold-Gymnasium München}
 
 \begin{document}
-%\maketitle
+\maketitle
 \tableofcontents
 
-\chapter{Photosynthese}
+\chapter{Einleitung}
 
-\chapter{Meristem}
-%\printbibliography 
+Vorschläge für Überschrift statt {\glqq Einleitung\grqq} 
 
-\chapter{Notes - Bibliography}
+Zitatbeispiel \parencite[29]{campbell}
 
-\begin{enumerate}
-	\item first item
-	\item second item 
-\end{enumerate}
+\begin{itemize}
+	\item Bedeutung von Gravitropismus in der Biologie
+	\item Gravitropismus als wichtige Pflanzeneigenschaft 
+\end{itemize}
+
+\chapter{Fachliche Analyse der Thematik: Gravitropismus}
+
+\chapter{Experimenteller Nachweis von Gravitropismus bei \emph{Lepidium sativum}}
+
+\section{Methoden}
+
+\section{Ergebnisse}
+
+\section{Diskussion}
+
+%\chapter{Schluss}
+
+\printbibliography
+
 
 
 \end{document}
