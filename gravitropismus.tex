@@ -1,12 +1,15 @@
+% https://tex.stackexchange.com/questions/144577/remove-chapter-number-from-bibliography
+
 \documentclass[
 a4paper, 
 11pt, 
 ngerman,
 listof=totoc,
+%oneside,
 %bibliography=totoc,
-bibliography=totocnumbered
+bibliography=totocnumbered,
+abstracton
 ]{scrreprt}
-
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -14,6 +17,28 @@ bibliography=totocnumbered
 \usepackage{graphicx}
 \usepackage{lipsum}
 \usepackage{csquotes}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{scrlayer-scrpage}
+\chead*{\pagemark}
+\cofoot*{}
+
+%\usepackage{lineno}
+%\usepackage{layout}
+%
+%\makeatletter
+%\renewcommand*{\lay@value}[2]{%
+%	\strip@pt\dimexpr0.351459\dimexpr\csname#2\endcsname\relax\relax mm%
+%}
+%\makeatother
+
+%\usepackage[showframe]{geometry}
+%
+%\geometry{
+%	top = 2.5cm,
+%	bottom = 2.5cm,
+%	left = 3.5cm,
+%	right = 2.5cm
+%	}
 
 \usepackage[
 backend=biber,
@@ -28,23 +53,39 @@ style=authoryear-ibid,
 
 \author{Alexandra Smirnova}
 
+
 \begin{document}
+	
+\begingroup
+\renewcommand*{\chapterpagestyle}{empty}
+\pagestyle{empty}
 \maketitle
 \tableofcontents
+\clearpage
+\endgroup
+	
+\renewcommand\abstractname{Abstract}
+\begin{abstract}
+	Abstract Text 
+\end{abstract}
+
+% \let\raggedsection\centering
+% \section*{\abstractname}
+% Dies ist die Zusammenfassung auf Deutsch.
 
 \chapter{Gravitropismus als wichtige Pflanzeneigenschaft}
-
-
 
 \chapter{Fachliche Analyse der Thematik: Gravitropismus}
 
 \section{Gravitropismus}
-Die Bestimmung der Wachstumrichtung der Wurzel und des Sprosses unter dem Einfluss der Schwerkraft wird als Gravitropismus (Geotropismus) bezeichnet. Dabei werden drei Bewegungen unterschieden: Positiv gravitrop, negativ gravitrop und transversalgravitrop. Positiv gravitrop bedeutet, dass das Wachstum zur Schwerkraftquelle hin (nach unten) erfolgt. Positiv gravitrope Organe wären zum Beispiel Wurzeln, Rhizoide (wurzelähnliche Strukturen), Moose oder Farnprothallien. Negativ gravitrop dagegen bedeutet, dass die Organe wie Sprossen, Sporangienträger der Schimmelpilze der Gattung Mucor oder Fruchtkörper mancher Pilze von der Schwerkraftquelle weg (nach oben) wachsen. Seitenwurzeln der ersten Ordnung (Nebenwurzeln, die von der Hauptwurzel entspringen) und zahlreiche Seitenzweige sowie Blätter wachsen transversalgravitrop: entweder flach oder quer nach unten in einem speziellen Winkel 
-\parencite[449]{Strasburger}. 
+Die Bestimmung der Wachstumrichtung der Wurzel und des Sprosses unter dem Einfluss der Schwerkraft wird als Gravitropismus (Geotropismus) bezeichnet. Dabei werden drei Bewegungen unterschieden: Positiv gravitrop, negativ gravitrop und transversalgravitrop. Positiv gravitrop bedeutet, dass das Wachstum zur Schwerkraftquelle hin (nach unten) erfolgt. Positiv gravitrope Organe wären zum Beispiel Wurzeln, Rhizoide (wurzelähnliche Strukturen), Moose oder Farnprothallien. Negativ gravitrop dagegen bedeutet, dass die Organe wie Sprossen, Sporangienträger der Schimmelpilze der Gattung \emph{Mucor} oder Fruchtkörper mancher Pilze von der Schwerkraftquelle weg (nach oben) wachsen.
+Diese beide Wachstumsrichtungen werden auch als Orthogravitropismus bezeichnet, da sie beide parallel zur Schwerkraft hinwachsen \parencite[546]{Jacob}.
+Seitenwurzeln der ersten Ordnung (Nebenwurzeln, die von der Hauptwurzel entspringen) und zahlreiche Seitenzweige sowie Blätter wachsen transversalgravitrop: entweder flach oder quer nach unten in einem bestimmten Winkel \parencite[449]{Strasburger}. 
 Legt man eine Pflanze quer, so werden sich die Organe, Wurzeln und Spross, krümmen, bis sie senkrecht stehen und wieder positiv bzw. negativ gravitrop wachsen
 \parencite[528]{Luettge}.
 
 \section{Differenzielles Wachstum}
+Die Krümmungsbewegung wird meistens durch differentielles Wachstum zweier Organhälften, deren Bereiche wachstumsfähig sind, hervorgerufen. Bei  
 
 
 \section{Koordination von Gravitropismus durch Pflanzenhormone}
@@ -81,16 +122,16 @@ create blueprint with OpenSCAD or LibreCAD or (paid) Autodesk
 
 Neuer Versuch mit Klinostat: Start um 12:40, Ende am 9.Tag (05.06.18) um 23:45; Bemerkung: Sprossen über 3cm (Annahme, dass die Krümmung deshalb verlangsamt war); Foto 5 (kleinerer Spross gebogen, größerer Spross nur geneigt)
 
-\subparagraph{7.Tag (03.06.18)}
+%\subparagraph{7.Tag (03.06.18)}
 
-Neuer Versuch mit Klinostat: Start um 12:40, Ende am 9.Tag (05.06.18) um 23:45; Bemerkung: Sprossen über 3cm (Annahme, dass die Krümmung deshalb verlangsamt war); Foto 5 (kleinerer Spross gebogen, größerer Spross nur geneigt)
+%Neuer Versuch mit Klinostat: Start um 12:40, Ende am 9.Tag (05.06.18) um 23:45; Bemerkung: Sprossen über 3cm (Annahme, dass die Krümmung deshalb verlangsamt war); Foto 5 (kleinerer Spross gebogen, größerer Spross nur geneigt)
 
 \begin{itemize}
 	\item 1. Tag (28.05.18): Aufbau des Experiments: alle Behälter mit der Anzuchterde gefüllt und auf der Plastiktüte (Vermeidung von Schmutz auf den Boden), Aussaat der Samen (jeweils 20 Stück in drei Behältern, gebliebene Samen in den vierten Becher (als Vergleichsergebnis gedacht), im Säckchen nur 3 Samen)
 	
-	\item 2. Tag (29.05.18): Keimung der Samen
+	\item 2. Tag (29.05.18): Keimung der Samen (ERGEBNIS)
 	
-	\item 3. Tag (30.05.18): Sprossen bis zu 2cm, noch keine Blätter, dennoch instabile Haft der Sprösslinge (noch nicht geeignet für das Experiment)
+	\item 3. Tag (30.05.18): Sprossen bis zu 2cm, noch keine Blätter, dennoch instabile Haft der Sprösslinge (noch nicht geeignet für das Experiment) (ERGEBNIS)
 	
 	\item 4. Tag (31.05.18): Gebildete Blätter, stabile Haft der Sprösslinge (geeignet für das Experiment), Säckchen bereit für den Versuch mit dem Klinostat (20 min für die Befestigung des Behälters an das Klinostat) und um 12.45 Versuch gestartet mit Geschwindigkeit 1 Umdrehung pro Minute; um 15.45 gestoppt, da die Pflanzen sich vollständig gebogen haben (nach außen die Sprossen, nach innen die Wurzeln), Foto 1 und 2
 	
