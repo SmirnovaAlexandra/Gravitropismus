@@ -19,6 +19,7 @@ abstracton
 \usepackage{csquotes}
 \usepackage[onehalfspacing]{setspace}
 \usepackage{scrlayer-scrpage}
+\usepackage{float}
 \chead*{\pagemark}
 \cofoot*{}
 
@@ -83,40 +84,6 @@ Gravitropismus wurde vor zweihundert Jahren anerkannt (Knight, 1806). Experiment
 -aktives Forschungsthema (aktuelle Publikationen, die sich damit befassen) kosmos etc.
 -meine Arbeit
 
-\section{Gravitropismus}
-
-Beim Gravitropismus, auch genannt Geotropismus, werden drei Bewegungsarten unterschieden: emph/{Positiv gravitrop},  emph/{negativ gravitrop} und  emph/{transversalgravitrop}.
-Positiv gravitrop bedeutet, dass das Wachstum der Organe, wie zum Beispiel Wurzeln, Rhizoide (wurzelähnliche Strukturen), Moose oder Farnprothallien, zur Schwerkraftquelle hin (nach unten zur Erdmitte) erfolgt.
-Negativ gravitrope Organe dagegen, wie Sprossen, Sporangienträger der Schimmelpilze der Gattung \emph{Mucor} oder Fruchtkörper mancher Pilze wachsen von der Schwerkraftquelle weg (nach oben).
-Diese beide Wachstumsrichtungen werden auch als Orthogravitropismus bezeichnet, da sie beide parallel zur Schwerkraft hin wachsen \parencite[546]{Jacob}.
-Seitenwurzeln der ersten Ordnung (Nebenwurzeln, die von der Hauptwurzel entspringen) und zahlreiche Seitenzweige sowie Blätter wachsen transversalgravitrop: entweder flach oder quer nach unten in einem bestimmten Winkel \parencite[449]{Strasburger}. 
-Legt man eine Pflanze quer, so werden sich Wurzeln und Spross krümmen, bis sie senkrecht stehen und wieder positiv bzw. negativ gravitrop wachsen
-\parencite[528]{Luettge}.
-
-
-\section{Koordination von Gravitropismus durch Pflanzenhormone}
-
-Auxine sind Pflanzenhormone, die viele Funktionen besitzen. Dabei ist die Stimulierung der Zellstreckung (aber nur in niedriger Konzentration) und die Seiten- und Adventivwurzelbildung besonders wichtig. Das dafür zuständige Auxin-Hormon ist die Indolessigsäure (IAA).
-Andere Funktionen dieses Hormons wären die Regulierung der Fruchtentwicklung, Verstärkung der Apikaldominanz, Verzögerung der Blattfalls und Förderung der Leitgewebedifferenzierung.
-Das Auxin wird nur in eine Richtung direkt durch das Parenchymgewebe (Gewebe, dessen Zellen nebeneinander liegen) transportiert: Von der Sprossspitze längst der Sprossachse bis zur Basis. Dieser Transport wird als polarer Transport bezeichnet und ist dabei nicht von der Schwerkraft abhängig.
-Diese Auxinbewegung wird von Auxin-Transportproteinen, die sich am basalen Zellenende befinden, verursacht.
-Das Hormon wird durch diese Proteine hinausbefördert. Das Eintreten des Auxins in die Nachbarzelle am Apikalende ist somit ermöglicht.
-Auxine werden in dem Apikalmeristem der Sprossachse synthetisiert. Von dort aus bewegen sie sich zur Streckungszone und stimulieren dabei das Zellwachstum.
-Jedoch ist diese Stimulierung nur dann möglich, wenn der Konzentrationsbereich des Auxins stimmt. Er liegt zwischen 10[hoch minus 8] bis 10[hoch minus 4] mol/l. Steigen die Konzentrationen, so kann Auxin die Zellstreckung hemmen durch Induktion der Ethylenbildung. 
-Bei der Wachstumsantwort der Zelle auf Auxin spielen die Protonenpumpen (Transmembranproteine) eine entscheidende Rolle. Das Auxin stimuliert die Protonenpumpen der Plasmamembranen (Membranpotenzial). Es werden Protonen herausgepumpt, wodurch eine Erhöhung der Spannung über der Plasmamenbran entsteht und der pH-Wert in der Zellwand gesenkt wird. 
-Durch die Ansäuerung  der Zellwand werden Expansine, spezifische keilförmige Proteine, aktiviert, die die Zellwandstruktur auflockern, indem sie Wasserstoffbrückenbindungen zwischen Cellulosemikrofibrillen und anderen Zellwandbestandteilen lösen. 
-Die Aufnahme von mehreren Ionen ist nun durch das erhöhte Membranpotenzial möglich. Das hat einen Turgor (osmotischer Druck einer Zelle) zur Folge, der durch einen durch Osmose bedingten Wassereinstrom erhöht wird. Durch den nun höheren Turgo und der größeren Zellwandplastizität kann sich nun die Zelle ausdehnen.
-Auch der Vorgang, bei dem die genetische Information umgesetzt  und für die Zelle nutzbar gemacht (Genexpression) wird, wird durch Auxin sehr schnell verändert, sodass neue Proteine von den Zellen in der Streckungszone gebildet werden.
-Die Expression anderer Gene wird nur von einem Teil dieser Proteine, die kurzlebig sind, transkribiert. 
-Außerdem müssen Zellen mehr Cytoplasma und Zellwandmaterial bilden, da das Wachstum aufrecht erhalten werden muss. Dies wird auch durch Auxin stimuliert \parencite[1118ff]{campbell}.
-
-
-Bei manchen Pflanzen übernehmen die Stimulierung der Zellstreckung Gibberelline \parencite[502f]{Nultsch}. 
-Gibberelline besitzen auch mehrere Funktionen neben dem Stimulieren der Sprossstreckung.
-Sie entwickeln Pollen, sind für Pollenschlauch- und Fruchtwachstum sowie Samenentwicklung und Keimung verantwortlich. Außerdem bestimmen sie das Geschlecht in eingeschlechtigen Blüten und regulieren den Übergang von Jugendphasen zu Adultphasen. 
-Bei der Zellstreckung wirken Gibberelline mit Auxin zusammen. Gibberelline aktivieren Enzyme, die die Zellwand auflockern und Expansinen den Eintritt in die Zellwand erleichtern \parencite[1122f]{campbell}.
-
-
 
 
 
@@ -126,17 +93,41 @@ Bei der Zellstreckung wirken Gibberelline mit Auxin zusammen. Gibberelline aktiv
 
 \chapter{Fachliche Analyse der Thematik Gravitropismus}
 
-\begin{itemize}
-	\item kurze Einleitung, ca. 3 Sätze
-	\item Beschreibung der Struktur des fachlichen Teils
-\end{itemize}
+In dieser Arbeit wird nun der Gravitropismus näher betrachtet. Zuerst werden für den Gravitropismus grundlegende Begriffe aus der Botanik geklärt, um die Reizaufnahme, die Signaltransduktion und das darauf folgende differenzielles Wachstum besser verstehen zu können.  
+
+
 
 \section{Für den Gravitropismus grundlegende Begriffe aus der Botanik}
 
-\begin{itemize}
-	\item Abbildung Pflanze mit Beschriftung 
-	\item Beschreibung der Struktur des fachlichen Teils
-\end{itemize}
+%\begin{figure}[H]
+%	\centering 
+%	\includegraphics[width = 0.4\linewidth]{bilder/Pflanzenaufbau.gif}
+%	\caption{Rhizoids}
+%\end{figure} 
+
+
+
+Beim Gravitropismus, auch genannt Geotropismus, werden drei Bewegungsarten unterschieden: \emph{Positiv gravitrop},  \emph{negativ gravitrop} und  \emph{transversalgravitrop}.
+Positiv gravitrop bedeutet, dass das Wachstum der Organe, wie zum Beispiel Wurzeln, Rhizoide (wurzelähnliche Strukturen), Moose oder Farnprothallien, zur Schwerkraftquelle hin (nach unten zur Erdmitte) erfolgt.
+Negativ gravitrope Organe dagegen, wie Sprossen, Sporangienträger der Schimmelpilze der Gattung \emph{Mucor} oder Fruchtkörper mancher Pilze wachsen von der Schwerkraftquelle weg (nach oben).
+
+
+Diese beide Wachstumsrichtungen werden auch als Orthogravitropismus bezeichnet, da sie beide parallel zur Schwerkraft hin wachsen \parencite[546]{Jacob}.
+Seitenwurzeln der ersten Ordnung (Nebenwurzeln, die von der Hauptwurzel entspringen) und zahlreiche Seitenzweige sowie Blätter wachsen transversalgravitrop: entweder flach oder quer nach unten in einem bestimmten Winkel \parencite[449]{Strasburger}. 
+
+\begin{figure}[H]
+\centering 
+ \includegraphics[width = 0.4\linewidth]{bilder/gravitrop_reagierende_Pflanze.jpg}
+ \caption{Gravitrop reagirende \emph{Arabidopsis thaliana}}
+\end{figure} 
+ 
+Legt man eine Pflanze quer, so werden sich Wurzeln und Spross krümmen, bis sie senkrecht stehen und wieder positiv bzw. negativ gravitrop wachsen
+\parencite[528]{Luettge}.
+
+
+
+
+
 
 \section{Reizaufnahme}
 
@@ -149,6 +140,12 @@ Amyloplasten befinden sich in Statocysten. Das sind Zellen, die die Graviperzept
 Diese Stärke enthaltenden Bereiche findet man bei den Wurzelhauben und bei Stärkescheiden der Sprossachsen.  
 Statolithen üben einen Druck auf Gravisensoren aus, wenn sie von der Schwerkraft beeinflusst werden. Wird die Lage der Pflanzen und ihrer Zellen verändert, so führt dies zu einer Änderung der Druckwirkung, wodurch die Graviperzeption ermöglicht wird \parencite[501f]{Nultsch}.
 
+%\begin{figure}[H]
+%		\centering 
+%		\includegraphics[width = 0.4\linewidth]{bilder/Statolithen2.gif}
+%		\caption{}
+%	\end{figure} 
+
 Diese Gravisensoren sind "Polster" von Membranen des endoplasmatischen Retikulums (ER), auf denen die Statolithen ruhen.
 Dabei haben die Statocysten eine zu den angeordneten ER-Polstern anpassende Form, sodass bei einer Drehung (aus der senkrechten Lage) der Statolithendruck auf das ER der Statocysten auf einer Seite momentan aufgehoben wird: auf der linken Seite bei einer Rechtsdrehung, auf der rechten Seite bei einer Linksdrehung.
 Dadurch erfolgt die Graviperzeption schneller, denn die Verlagerung der Wurzel hängt  mit der Aufhebung des Statolithendruckes auf die ER-Polster links oder rechts der Wurzelhaube zusammen \parencite[531f]{Luettge}. (Bild)
@@ -158,35 +155,73 @@ Dictyosomen (flache, membranumhüllte Hohlräumen in der Zelle) synthetisieren d
 Sie bevorzugen auf der Oberseite zu wandern, da beim Verlagern der Statolithen auf die Unterseite, der Weg dort damit gesperrt wird. Bei der Oberseite bewirken sie somit ein verstärktes Wandwachstum, also einen positiven Gravitropismus.
 Bei gravitrop reagierenden Pilzen werden Amyloplasten durch "Glanzkörper" ersetzt, die die Funktion der Statolithen übernehmen, da Pilze keine Stärke enthalten. Diese in speziellen Vacuole liegenden Einschlusskörper besitzen einen hohen spezifischen Gewicht, da sie aus [BaSO4] bestehen \parencite[453f]{Strasburger}.
 
+
+
+
 \section{Signaltransduktion und differenzielles Wachstum}
 
-Die danach folgende Signalübermittlung durch den direkten Kontakt zwischen den Amyloplasten und ER wird als gravisensorische Transduktion bezeichnet.
+Die folgende Signalübermittlung durch den direkten Kontakt zwischen den Amyloplasten und ER wird als gravisensorische Transduktion bezeichnet.
 Durch den Druck der Amyloplasten auf die ER-Membranen wird ein [Ca2+]-Efflux (das Austreten von Molekülen oder Ionen an der Zellmembran) aus dem ER verursacht.
 Dadurch wird die lokale Calcium-Konzentration im Cytoplasma erhöht. 
 Es wurde aber durch Untersuchungen an anderen Pflanzen festgestellt, dass der Druck auf eine einzige ER-Zysterne ausreicht, um einen Efflux zu verursachen.
 Wichtiger bei der Signalumwandlung sind jedoch die Änderungen des elektrischen Feldes, die die Wurzel umgeben.
 Bei senkrecht stehenden Pflanzen wandern ständig positive geladene Ionen (hier: Protonen) in die Wurzelspitze ein und treten im Bereich der Zellstreckzone wieder aus.
 Diese Ionenbewegung wird als apoplastischer Strom bezeichnet, der ein elektrisches Feld, das die Wurzel umgibt, erzeugt. Dieses Feld ist mit einer hochempfindlichen Vibrationselektrode nachweisbar. 
-Wird nun die Pflanze horizontal gelegt, so werden die Wurzeln gravitropisch gereizt. Dabei gelangen die Protonen nur noch in die untere Flanke der Wurzelspitze hinein und auf der Oberseite hinaus, wodurch auch das elektrische Feld sich ändert.
-Jedoch die These, dass bioelektrische Phänomene sich an der gravitropischen Transduktion beteiligen, kann nicht verallgemeinert werden \parencite[502f]{Nultsch}.
+Wird nun die Pflanze horizontal gelegt, so werden die Wurzeln gravitropisch gereizt. Dabei gelangen die Protonen nur noch in die untere Flanke der Wurzelspitze hinein und auf der Oberseite hinaus, wodurch auch das elektrische Feld sich ändert \parencite[502f]{Nultsch}.
 
 
 
-Das von der Graviperzeption entstandene Signal kann nur in der Streckungszone hinter der Wurzelspitze aufgenommen werden. Kommt das Signal an, so setzt die Krümmung ein, in dem die Flanken anfangen ungleich zu wachsen. Damit ist feststellbar, dass der Perzeptions- und Reaktionsort getrennt sind.
+Dieses von der Graviperzeption entstandene Signal kann nur in der Streckungszone hinter der Wurzelspitze aufgenommen werden. Kommt das Signal an, so setzt die Krümmung ein, in dem die Flanken anfangen ungleich zu wachsen. Damit ist feststellbar, dass der Perzeptions- und Reaktionsort getrennt sind.
 Für diese Reaktion sind Präsentationszeiten des Reizes wichtig. Sie liegen meist zwischen 2 und 85 Minuten. Das dauert viel länger, als die kürzesten Reizeinwirkungen, die unter 30 Sekunden liegen und noch wahrgenommen werden können.
-Somit wird bei jeder kleinen und kurzen Reizeinwirkung eine Vollführung der Krümmungsbewegung vermieden. Das ist wichtig für Pflanzen, um zum Beispiel nicht bei jedem Windwehen unnötigerweise  sich krümmen zu müssen \parencite[531]{Luettge}.
+Somit wird bei jeder kleinen und kurzen Reizeinwirkung eine Vollführung der Krümmungsbewegung vermieden. Das ist wichtig für Pflanzen, um zum Beispiel nicht bei jedem Windwehen umsonst sich krümmen zu müssen \parencite[531]{Luettge}.
 
+(Bild)
 
+Die Ursache der Krümmung nach dem Signal ist die durch Schwerkraft hervorgerufene asymmetrische Verteilung des Auxins  \parencite[502f]{Nultsch}.
 
-Bei mehrzelligen Pflanzen (z.B. Bäume) wird  nach der Graviperzeption und in der darauf folgender Kette der gravitropen Reaktionsfolge  das Auxin, genauer gesagt das IAA (Indolessigsäure) in der physikalischer Unterseite der Sprossachsen sowie Wurzeln in höherer Konzentration aufgefunden.
-Auf der Seite erhöhten oder erniedrigten IAA-Gehalts wird dann bei Stämmen das Reaktionsholz gebildet.
-Wegen der Hemmung des basipetalen (abwärts strebend) Auxinlängsttransport auf der Oberseite, die die Schwerkraft hervorruft, wird ein seitlicher Auxintransport zur physikalischer Unterseite verursacht. Es wird dabei berücksichtigt, dass [Ca2+]-Ionen bei den beiden Prozessen beteiligt waren.
-Dadurch verstärkt sich das Wachstum in der Unterseite, die sich dadurch anfängt zu runden, wodurch der Spross oder der Stamm sich senkrecht aufrichten. 
-Bei den Wurzeln wächst die Unterseite schwächer, jedoch findet auch hier ein lateraler Auxintransport von der Ober- zur Unterseite in der äußersten Spitze statt \parencite[453f]{Strasburger}.
+Auxine sind Pflanzenhormone, die viele Funktionen besitzen. Dabei ist die Stimulierung der Zellstreckung (aber nur in niedriger Konzentration) und die Seiten- und Adventivwurzelbildung besonders wichtig. Das dafür zuständige Auxin-Hormon ist die Indolessigsäure (IAA).
 
+Andere Funktionen dieses Hormons wären die Regulierung der Fruchtentwicklung, Verstärkung der Apikaldominanz, Verzögerung der Blattfalls und Förderung der Leitgewebedifferenzierung.
 
-  
+Das Auxin bei der Krümmung wird nur in eine Richtung direkt durch das Parenchymgewebe (Gewebe, dessen Zellen nebeneinander liegen) transportiert: Von der Sprossspitze längst der Sprossachse bis zur Basis. Dieser Transport wird als polarer Transport bezeichnet und ist dabei nicht von der Schwerkraft abhängig.
+
+Diese Auxinbewegung wird von Auxin-Transportproteinen, die sich am basalen Zellenende befinden, verursacht.
+Das Hormon wird durch diese Proteine hinausbefördert. Das Eintreten des Auxins in die Nachbarzelle am Apikalende ist somit ermöglicht.
+Auxine werden in dem Apikalmeristem der Sprossachse synthetisiert. Von dort aus bewegen sie sich zur Streckungszone und stimulieren dabei das Zellwachstum.
+Jedoch ist diese Stimulierung nur dann möglich, wenn der Konzentrationsbereich des Auxins stimmt. Er liegt zwischen 10[hoch minus 8] bis 10[hoch minus 4] mol/l. Steigen die Konzentrationen, so kann Auxin die Zellstreckung hemmen durch Induktion der Ethylenbildung.
+
+Bei der Wachstumsantwort der Zelle auf Auxin spielen die Protonenpumpen (Transmembranproteine) eine entscheidende Rolle. Das Auxin stimuliert die Protonenpumpen der Plasmamembranen (Membranpotenzial). Es werden Protonen herausgepumpt, wodurch eine Erhöhung der Spannung über der Plasmamenbran entsteht und der pH-Wert in der Zellwand gesenkt wird. 
+
+Durch die Ansäuerung  der Zellwand werden Expansine, spezifische keilförmige Proteine, aktiviert, die die Zellwandstruktur auflockern, indem sie Wasserstoffbrückenbindungen zwischen Cellulosemikrofibrillen und anderen Zellwandbestandteilen lösen.
+
+Die Aufnahme von mehreren Ionen ist nun durch das erhöhte Membranpotenzial möglich. Das hat einen Turgor (osmotischer Druck einer Zelle) zur Folge, der durch einen durch Osmose bedingten Wassereinstrom erhöht wird. Durch den nun höheren Turgo und der größeren Zellwandplastizität kann sich nun die Zelle ausdehnen.
+
+Die Aufnahme von mehreren Ionen ist nun durch das erhöhte Membranpotenzial möglich. Das hat einen Turgor (osmotischer Druck einer Zelle) zur Folge, der durch einen durch Osmose bedingten Wassereinstrom erhöht wird. Durch den nun höheren Turgo und der größeren Zellwandplastizität kann sich nun die Zelle ausdehnen.
+Auch der Vorgang, bei dem die genetische Information umgesetzt  und für die Zelle nutzbar gemacht (Genexpression) wird, wird durch Auxin sehr schnell verändert, sodass neue Proteine von den Zellen in der Streckungszone gebildet werden.
+Die Expression anderer Gene wird nur von einem Teil dieser Proteine, die kurzlebig sind, transkribiert. 
+Außerdem müssen Zellen mehr Cytoplasma und Zellwandmaterial bilden, da das Wachstum aufrecht erhalten werden muss. Dies wird auch durch Auxin stimuliert \parencite[1118ff]{campbell}.
+
+Auxin spielt aber bei manchen Pflanzenarten (z.B. bei Sonnenblumen \emph{Helianthus} oder Bohnen \emph{Phaseolus}) eine untergeordnete Rolle.
+Die Steuerung der Krümmung dieser Pflanzenarten übernehmen Gibberelline \parencite[502f]{Nultsch}.
+ 
+Gibberelline sind weitere Pflanzenhormone neben dem Auxin und besitzen auch mehrere Funktionen außer dem Stimulieren der Sprossstreckung:
+Sie entwickeln Pollen, sind für Pollenschlauch- und Fruchtwachstum sowie Samenentwicklung und Keimung verantwortlich. Außerdem bestimmen sie das Geschlecht in eingeschlechtigen Blüten und regulieren den Übergang von Jugendphasen zu Adultphasen. 
+Bei der Zellstreckung wirken Gibberelline mit Auxin zusammen. Gibberelline aktivieren Enzyme, die die Zellwand auflockern und Expansinen den Eintritt in die Zellwand erleichtern \parencite[1122f]{campbell}.
+
+ 
 Wie oben dargelegt, ist Gravitropismus ein lebenswichtiges Resultat eines komplexen und zum Teil noch unerforschten Zusammenspiels von biologischen Akteuren. Dennoch lässt sich die gesamte Kaskade mit einfachen Mitteln einleiten und kontrollieren, was zum experimentellen Teil der vorliegenden Arbeit führt. 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \chapter{Experimenteller Nachweis von Gravitropismus bei \emph{Lepidium sativum}}
@@ -312,4 +347,6 @@ https://www.lernhelfer.de/schuelerlexikon/biologie-abitur/artikel/bau-und-funkti
 http://www.plantphysiol.org/content/120/2/343 (Statolithen2)
 
 Bild-Differenzielles Wachstum (selbstgemachtes diff.png)
+
+http://www.zum.de/Faecher/Materialien/beck/12/bs12-2.htm (Pflanzenaufbau)
 \end{document}
