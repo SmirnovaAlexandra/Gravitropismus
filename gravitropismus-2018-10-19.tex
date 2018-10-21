@@ -20,6 +20,7 @@ abstracton
 \usepackage[onehalfspacing]{setspace}
 \usepackage{scrlayer-scrpage}
 \usepackage{float}
+\usepackage{mhchem}
 \chead*{\pagemark}
 \cofoot*{}
 
@@ -79,7 +80,7 @@ style=authoryear-ibid,
 
 Viele Pflanzen sind an die Erde festgebundene Organismen, die seit ihrer Keimung ihr ganzes Leben an einem Ort verbringen. Dabei werden die Pflanzen durch Wurzeln an die Erde verankert. 
 
-Gravitropismus wurde vor zweihundert Jahren anerkannt (Knight, 1806). Experimente mit verschiedenen Pflanzen wie zum Beispiel der emph/{arabidopsis}
+Gravitropismus wurde vor zweihundert Jahren anerkannt (Knight, 1806). Experimente mit verschiedenen Pflanzen wie zum Beispiel der \emph{arabidopsis}
 
 -aktives Forschungsthema (aktuelle Publikationen, die sich damit befassen) kosmos etc.
 -meine Arbeit
@@ -93,32 +94,34 @@ Gravitropismus wurde vor zweihundert Jahren anerkannt (Knight, 1806). Experiment
 
 \chapter{Fachliche Analyse der Thematik Gravitropismus}
 
-In dieser Arbeit wird nun der Gravitropismus näher betrachtet. Zuerst werden für den Gravitropismus grundlegende Begriffe aus der Botanik geklärt, um die Reizaufnahme, die Signaltransduktion und das darauf folgende differenzielles Wachstum besser verstehen zu können.  
+In der vorliegenden Arbeit wird die Theorie des Gravitropismus kurz geklärt und dann im experimentellen Teil nachgewiesen. Zuerst werden für den Gravitropismus grundlegende Begriffe aus der Botanik geklärt, um die Reizaufnahme, die Signaltransduktion und das darauf folgende differenzielles Wachstum besser verstehen zu können.  
 
 
 
 \section{Für den Gravitropismus grundlegende Begriffe aus der Botanik}
 
-%\begin{figure}[H]
-%	\centering 
-%	\includegraphics[width = 0.4\linewidth]{bilder/Pflanzenaufbau.gif}
-%	\caption{Rhizoids}
-%\end{figure} 
+\subsection{Morphologie der Pflanze}
+
+\begin{figure}[H]
+	\centering 
+	\includegraphics[width = 0.4\linewidth]{bilder/Pflanzenaufbau.png}
+	\caption{Pflanzenaufbau  \label{Pflanzenaufbau}}
+\end{figure} 
 
 
-
+\subsection{Arten des Gravitropismus}
 Beim Gravitropismus, auch genannt Geotropismus, werden drei Bewegungsarten unterschieden: \emph{Positiv gravitrop},  \emph{negativ gravitrop} und  \emph{transversalgravitrop}.
 Positiv gravitrop bedeutet, dass das Wachstum der Organe, wie zum Beispiel Wurzeln, Rhizoide (wurzelähnliche Strukturen), Moose oder Farnprothallien, zur Schwerkraftquelle hin (nach unten zur Erdmitte) erfolgt.
 Negativ gravitrope Organe dagegen, wie Sprossen, Sporangienträger der Schimmelpilze der Gattung \emph{Mucor} oder Fruchtkörper mancher Pilze wachsen von der Schwerkraftquelle weg (nach oben).
 
 
-Diese beide Wachstumsrichtungen werden auch als Orthogravitropismus bezeichnet, da sie beide parallel zur Schwerkraft hin wachsen \parencite[546]{Jacob}.
-Seitenwurzeln der ersten Ordnung (Nebenwurzeln, die von der Hauptwurzel entspringen) und zahlreiche Seitenzweige sowie Blätter wachsen transversalgravitrop: entweder flach oder quer nach unten in einem bestimmten Winkel \parencite[449]{Strasburger}. 
+Diese zwei Wachstumsrichtungen werden auch als \emph{Orthogravitropismus} bezeichnet, da sie beide parallel zur Schwerkraft wachsen \parencite[546]{Jacob}.
+Seitenwurzeln der ersten Ordnung (Nebenwurzeln, die von der Hauptwurzel entspringen) und zahlreiche Seitenzweige sowie Blätter wachsen \emph{ transversalgravitrop}: entweder horizontal oder quer nach unten in einem bestimmten Winkel \parencite[449]{Strasburger}. 
 
 \begin{figure}[H]
 \centering 
  \includegraphics[width = 0.4\linewidth]{bilder/gravitrop_reagierende_Pflanze.jpg}
- \caption{Gravitrop reagirende \emph{Arabidopsis thaliana}}
+ \caption{Gravitrop reagirende \emph{Arabidopsis thaliana} \label{gravitrop_reagierende_Pflanze}}
 \end{figure} 
  
 Legt man eine Pflanze quer, so werden sich Wurzeln und Spross krümmen, bis sie senkrecht stehen und wieder positiv bzw. negativ gravitrop wachsen
@@ -131,9 +134,9 @@ Legt man eine Pflanze quer, so werden sich Wurzeln und Spross krümmen, bis sie 
 
 \section{Reizaufnahme}
 
-Bei der Krümmung werden zuvor Reize durch Statolithen, schwere Körperteilchen oder Organelle in bestimmten Zellen des Sprosses, der Koleoptil-,und der Wurzelspitzen aufgenommen. Es handelt sich dabei meist um Amyloplasten, die aus Stärke bestehen \parencite[530]{Luettge}.
+Damit eine gravitrope Krümmung entstehen kann, werden zuvor Reize durch Statolithen, schwere Körperteilchen oder Organelle in bestimmten Zellen des Sprosses, der Koleoptil-, und der Wurzelspitzen aufgenommen. Es handelt sich dabei meist um Amyloplasten, die aus Stärke bestehen \parencite[530]{Luettge}.
 
-Jedoch entscheidend ist der Stärkegehalt  der Amyloplasten, denn ohne ihn geht die gravitrope Reaktionfähigkeit verloren, so als würde man die Wurzelhaube entfernen, wobei das Längenwachstum der Wurzeln weiterhin unbeeinflusst bleibt.
+Entscheidend ist der Stärkegehalt  der Amyloplasten, denn ohne ihn geht die gravitrope Reaktionfähigkeit verloren, so als würde man die Wurzelhaube entfernen, wobei das Längenwachstum der Wurzeln weiterhin unbeeinflusst bleibt.
 Die Stärke aus den Statolithen-Amyloplasten kann man durch experimentelle Eingriffe, zum Beispiel durch Kühlung, verschwinden lassen \parencite[452]{Strasburger}.
 
 Amyloplasten befinden sich in Statocysten. Das sind Zellen, die die Graviperzeption ermöglichen. In diesen Zellen sind Statolithen zahlreich vorhanden. Kommen Statocysten in größeren Mengen vor, so bilden sie meist ein Gewebe, das als Statenchyme bezeichnet wird.
@@ -144,38 +147,46 @@ Statolithen üben einen Druck auf Gravisensoren aus, wenn sie von der Schwerkraf
 %		\centering 
 %		\includegraphics[width = 0.4\linewidth]{bilder/Statolithen2.gif}
 %		\caption{}
-%	\end{figure} 
+%	\end{figure} luettgebild
 
-Diese Gravisensoren sind "Polster" von Membranen des endoplasmatischen Retikulums (ER), auf denen die Statolithen ruhen.
-Dabei haben die Statocysten eine zu den angeordneten ER-Polstern anpassende Form, sodass bei einer Drehung (aus der senkrechten Lage) der Statolithendruck auf das ER der Statocysten auf einer Seite momentan aufgehoben wird: auf der linken Seite bei einer Rechtsdrehung, auf der rechten Seite bei einer Linksdrehung.
-Dadurch erfolgt die Graviperzeption schneller, denn die Verlagerung der Wurzel hängt  mit der Aufhebung des Statolithendruckes auf die ER-Polster links oder rechts der Wurzelhaube zusammen \parencite[531f]{Luettge}. (Bild)
+Statolithen ruhen auf den {\glqq Polster\grqq} von Membranen des endoplasmatischen Retikulums (ER). Dabei haben die Statocysten eine zu den angeordneten ER-Polstern anpassende Form, sodass bei einer Drehung (aus der senkrechten Lage) der Statolithendruck auf das ER der Statocysten auf einer Seite momentan aufgehoben wird: auf der linken Seite bei einer Rechtsdrehung, auf der rechten Seite bei einer Linksdrehung.
+Dadurch erfolgt die Graviperzeption schneller, denn die Verlagerung der Wurzel hängt  mit der Aufhebung des Statolithendrucks auf die ER-Polster links oder rechts der Wurzelhaube zusammen \parencite[531f]{Luettge}. (Bild)luettge
 
-Dies ist aber nur der Fall bei Organen höherer Pflanzen, denn bei einer Einzelzelle, beispielsweise werden die \emph{Chara} -Rhizoiden genommen, erfolgt die Streckung nur durch Spitzenwachstum (einseitiges Wachstum der Zelle).
-Dictyosomen (flache, membranumhüllte Hohlräumen in der Zelle) synthetisieren dabei Membran- und Zellwandbausteine unter dem Bereich der wachsenden Spitze und transportieren dorthin die entstandenen Vesikeln (runde Bläschen).
-Sie bevorzugen auf der Oberseite zu wandern, da beim Verlagern der Statolithen auf die Unterseite, der Weg dort damit gesperrt wird. Bei der Oberseite bewirken sie somit ein verstärktes Wandwachstum, also einen positiven Gravitropismus.
-Bei gravitrop reagierenden Pilzen werden Amyloplasten durch "Glanzkörper" ersetzt, die die Funktion der Statolithen übernehmen, da Pilze keine Stärke enthalten. Diese in speziellen Vacuole liegenden Einschlusskörper besitzen einen hohen spezifischen Gewicht, da sie aus [BaSO4] bestehen \parencite[453f]{Strasburger}.
+Dies ist aber nur der Fall bei Organen höherer Pflanzen, denn bei einer Einzelzelle, z.B einer \emph{Chara}-Rhizoide, erfolgt die Streckung nur durch Spitzenwachstum (einseitiges Wachstum der Zelle).
+Dictyosomen (flache, membranumhüllte Hohlräume in der Zelle) synthetisieren dabei Membran- und Zellwandbausteine unter dem Bereich der wachsenden Spitze und transportieren  die entstandenen Vesikel.
+Vesikel wandern auf der Oberseite, da beim Verlagern der Statolithen auf die Unterseite, der Weg dort damit gesperrt wird. Bei der Oberseite bewirken sie somit ein verstärktes Wandwachstum, also einen positiven Gravitropismus.
+
+Bei gravitrop reagierenden Pilzen werden Amyloplasten durch {\glqq Glanzkörper\grqq} ersetzt, die die Funktion der Statolithen übernehmen, da Pilze keine Stärke enthalten. Diese in Vacuolen liegenden Einschlusskörper besitzen einen hohes spezifisches Gewicht, da sie aus \ce{BaSO4} bestehen \parencite[453f]{Strasburger}.
 
 
 
 
 \section{Signaltransduktion und differenzielles Wachstum}
 
-Die folgende Signalübermittlung durch den direkten Kontakt zwischen den Amyloplasten und ER wird als gravisensorische Transduktion bezeichnet.
-Durch den Druck der Amyloplasten auf die ER-Membranen wird ein [Ca2+]-Efflux (das Austreten von Molekülen oder Ionen an der Zellmembran) aus dem ER verursacht.
-Dadurch wird die lokale Calcium-Konzentration im Cytoplasma erhöht. 
-Es wurde aber durch Untersuchungen an anderen Pflanzen festgestellt, dass der Druck auf eine einzige ER-Zysterne ausreicht, um einen Efflux zu verursachen.
-Wichtiger bei der Signalumwandlung sind jedoch die Änderungen des elektrischen Feldes, die die Wurzel umgeben.
-Bei senkrecht stehenden Pflanzen wandern ständig positive geladene Ionen (hier: Protonen) in die Wurzelspitze ein und treten im Bereich der Zellstreckzone wieder aus.
-Diese Ionenbewegung wird als apoplastischer Strom bezeichnet, der ein elektrisches Feld, das die Wurzel umgibt, erzeugt. Dieses Feld ist mit einer hochempfindlichen Vibrationselektrode nachweisbar. 
-Wird nun die Pflanze horizontal gelegt, so werden die Wurzeln gravitropisch gereizt. Dabei gelangen die Protonen nur noch in die untere Flanke der Wurzelspitze hinein und auf der Oberseite hinaus, wodurch auch das elektrische Feld sich ändert \parencite[502f]{Nultsch}.
+\subsection{Calcium}
+
+Die Signalübermittlung durch den direkten Kontakt zwischen Amyloplasten und ER wird als \emph{gravisensorische Transduktion} bezeichnet.
+Durch den Druck der Amyloplasten auf die ER-Membranen wird ein \ce{Ca^{2+}}-Efflux (das Austreten von Molekülen oder Ionen an der Zellmembran) aus dem ER verursacht.
+Dadurch wird die lokale \ce{Ca^{2+}}-Konzentration im Cytoplasma erhöht. 
+Bereits ein Druck auf eine einzige ER-Zysterne reicht aus, um einen Efflux zu verursachen.
+
+\subsection{Elektronisches Feld}
+
+Wichtiger bei der Signalumwandlung sind jedoch die Änderungen des elektrischen Feldes, dass die Wurzel umgibt.
+Bei senkrecht stehenden Pflanzen wandern positive geladene Ionen (hier: Protonen) in die Wurzelspitze ein und treten im Bereich der Zellstreckzone wieder aus (?).
+
+Diese Ionenbewegung wird als apoplastischer Strom bezeichnet, der das elektrisches Feld, das die Wurzel umgibt, erzeugt. Dieses Feld ist mit einer hochempfindlichen Vibrationselektrode nachweisbar. 
+Wird die Pflanze horizontal gelegt, so werden die Wurzeln gravitropisch gereizt. Dabei gelangen die Protonen nur noch in die untere Flanke der Wurzelspitze hinein und auf der Oberseite hinaus (?), wodurch auch das elektrische Feld sich ändert \parencite[502f]{Nultsch}.
 
 
 
-Dieses von der Graviperzeption entstandene Signal kann nur in der Streckungszone hinter der Wurzelspitze aufgenommen werden. Kommt das Signal an, so setzt die Krümmung ein, in dem die Flanken anfangen ungleich zu wachsen. Damit ist feststellbar, dass der Perzeptions- und Reaktionsort getrennt sind.
-Für diese Reaktion sind Präsentationszeiten des Reizes wichtig. Sie liegen meist zwischen 2 und 85 Minuten. Das dauert viel länger, als die kürzesten Reizeinwirkungen, die unter 30 Sekunden liegen und noch wahrgenommen werden können.
-Somit wird bei jeder kleinen und kurzen Reizeinwirkung eine Vollführung der Krümmungsbewegung vermieden. Das ist wichtig für Pflanzen, um zum Beispiel nicht bei jedem Windwehen umsonst sich krümmen zu müssen \parencite[531]{Luettge}.
+Dieses durch der Graviperzeption entstandene Signal kann nur in der Streckungszone hinter der Wurzelspitze aufgenommen werden. Kommt das Signal an, so setzt die Krümmung ein, indem die Flanken anfangen, ungleich zu wachsen. Damit ist feststellbar, dass der Perzeptions- und Reaktionsort getrennt sind.
 
-(Bild)
+Für diese Reaktion sind Präsentationszeiten des Reizes wichtig. Sie liegen meist zwischen 2 und 85 Minuten. Das dauert viel länger, als die kürzesten Reizeinwirkungen, die noch wahrgenommen werden können und unter 30 Sekunden liegen. (Kontrolle vllt gleicher text)
+Somit wird bei jeder kleinen und kurzen Reizeinwirkung eine Vollführung der Krümmungsbewegung vermieden. Das ist wichtig für Pflanzen, um zum Beispiel eine gravitropische Reaktion auf eine Windeinwirkung zu verhindern \parencite[531]{Luettge}.
+
+
+\subsection{Auxin und Gibberelline}
 
 Die Ursache der Krümmung nach dem Signal ist die durch Schwerkraft hervorgerufene asymmetrische Verteilung des Auxins  \parencite[502f]{Nultsch}.
 
