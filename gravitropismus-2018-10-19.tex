@@ -1,11 +1,11 @@
 % https://tex.stackexchange.com/questions/144577/remove-chapter-number-from-bibliography
 
 \documentclass[
-a4paper, 
+%a4paper, 
 11pt, 
 ngerman,
 listof=totoc,
-%oneside,
+oneside,
 %bibliography=totoc,
 bibliography=totocnumbered,
 abstracton
@@ -34,14 +34,13 @@ abstracton
 %}
 %\makeatother
 
-%\usepackage[showframe]{geometry}
-%
-%\geometry{
-%	top = 2.5cm,
-%	bottom = 2.5cm,
-%	left = 3.5cm,
-%	right = 2.5cm
-%	}
+\usepackage[a4paper
+,showframe
+,top=2.5cm
+,bottom=2.5cm
+,left=2.5cm
+,right=2.5cm
+]{geometry}
 
 \usepackage[
 backend=biber,
@@ -70,7 +69,10 @@ style=authoryear-ibid,
 \renewcommand\abstractname{Abstract}
 \begin{abstract}
 
-Gravitropismus ist ein aktuelles Thema
+Gravitropismus wurde schon im 19.Jahrhundert entdeckt und ist seit dem ein Thema, das bis heute geforscht wird. Das Pflanzen sich nach der Schwerkraft orientieren, um an das heranzukommen, was sie zum Überleben brauchten, ist schon längst bekannt. Jedoch ist es schwieriger zu verstehen, was genau in der Pflanze für Prozesse und Reaktionen geschehen. Ein Teil dieses Mysteriums wurde schon erforscht und veröffentlicht.
+
+Gravitropismus folgt in drei Schritten ab. Zuerst wird ein verursachter Reiz durch die Statolithen aufgenommen, der in ein Signal umgewandelt wird. Im zweiten Schritt erfolgt dann die Signaltransduktion, wodurch Pflanzenhormone (Auxin oder Gibberelline) aktiviert werden. Diese Hormone führen dazu, dass die Pflanze sich anfängt zu krümmen, der letzte Schritt dieses ganzen Prozesses. 
+Diese Bewegung kann man experimentell verfolgen.
 	
 \end{abstract}
 
@@ -107,7 +109,11 @@ In der vorliegenden Arbeit wird die Theorie des Gravitropismus kurz geklärt und
 Um die Prozesse des Gravitropismus zu verstehen, ist es wichtig den Aufbau der Pflanze zu kennen, um die Vorgänge des Gravitropismus in den verschiedenen Bereichen der Pflanze verfolgen zu können.
 
 
-
+\begin{figure}[H]
+	\centering 
+	\includegraphics[width = 0.3\linewidth]{Spross.pdf}
+	\caption{ }
+\end{figure}
 
 \subsection{Arten des Gravitropismus}
 
@@ -121,25 +127,19 @@ Seitenwurzeln der ersten Ordnung (Nebenwurzeln, die von der Hauptwurzel entsprin
 \begin{figure}[H]
 \centering 
  \includegraphics[width = 0.3\linewidth]{bilder/gravitrop_reagierende_Pflanze.jpg}
- \caption{Gravitrop reagirende \emph{Arabidopsis thaliana} \label{gravitrop_reagierende_Pflanze}}
+ \caption{Gravitrop reagirende \emph{Arabidopsis thaliana} \parencite[5]{Masson2002} \label{gravitrop_reagierende_Pflanze}}
 \end{figure} 
  
-Legt man eine Pflanze quer, so werden sich Wurzeln und Spross krümmen, bis sie senkrecht stehen und wieder positiv bzw. negativ gravitrop wachsen \parencite[528]{Luettge}, wie in der Abbildung \ref{gravitrop_reagierende_Pflanze} \parencite[5]{gravitrop_reagierende_Pflanze} erkennbar ist.
-
-
-
-
-
-
+Legt man eine Pflanze quer, so werden sich Wurzeln und Spross krümmen, bis sie senkrecht stehen und wieder positiv bzw. negativ gravitrop wachsen \parencite[528]{Luettge}, wie in der Abbildung \ref{gravitrop_reagierende_Pflanze}  erkennbar ist.
 
 \section{Reizaufnahme}
 
-Damit eine gravitrope Krümmung entstehen kann, werden zuvor Reize durch \emph{Statolithen}, schwere Körperteilchen oder Organelle in bestimmten Zellen des Sprosses (Abbildung \ref{Statolithen} \parencite[345]{Statolithen}), der \emph{Koleoptil}-, und der Wurzelspitzen aufgenommen. Es handelt sich dabei meist um \emph{Amyloplasten}, die aus Stärke bestehen \parencite[530]{Luettge}.
+Damit eine gravitrope Krümmung entstehen kann, werden zuvor Reize durch \emph{Statolithen}, schwere Körperteilchen oder Organelle in bestimmten Zellen des Sprosses (Abbildung \ref{Statolithen}), der \emph{Koleoptil}-, und der Wurzelspitzen aufgenommen. Es handelt sich dabei meist um \emph{Amyloplasten}, die aus Stärke bestehen \parencite[530]{Luettge}.
 
 \begin{figure}[H]
 	\centering 
 	\includegraphics[width = 0.4\linewidth]{bilder/Statolithen2.png}
-	\caption{Statolithen \label{Statolithen}}
+	\caption{Statolithen \parencite[345]{Chen1999} \label{Statolithen}}
 \end{figure} 
 
 Entscheidend ist der Stärkegehalt  der Amyloplasten, denn ohne ihn geht die gravitrope Reaktionfähigkeit verloren, wobei das Längenwachstum der Wurzeln weiterhin unbeeinflusst bleibt.
@@ -149,13 +149,13 @@ Die zahlreich vorhandenen Statolithen befinden sich in Zellen (\emph{Statocysten
 Diese Stärke enthaltenden Bereiche findet man bei den Wurzelhauben und bei Stärkescheiden der Sprossachsen.  
 Statolithen üben einen Druck auf Gravisensoren aus, wenn sie von der Schwerkraft beeinflusst werden. Wird die Lage der Pflanzen und ihrer Zellen verändert, so führt dies zu einer Änderung der Druckwirkung, wodurch die Graviperzeption ermöglicht wird \parencite[501f]{Nultsch}.
 
-Statolithen ruhen auf den {\glqq Polster\grqq} von Membranen des \emph{endoplasmatischen Retikulums} (ER). Dabei haben die Statocysten eine zu den angeordneten ER-Polstern anpassende Form, sodass bei einer Drehung (aus der senkrechten Lage) der Statolithendruck auf das ER der Statocysten auf einer Seite momentan aufgehoben wird: auf der linken Seite bei einer Rechtsdrehung, auf der rechten Seite bei einer Linksdrehung, wie in Abbildung \ref{Graviperzeption} \parencite[533]{Graviperzeption} zu sehen ist.
+Statolithen ruhen auf den {\glqq Polster\grqq} von Membranen des \emph{endoplasmatischen Retikulums} (ER). Dabei haben die Statocysten eine zu den angeordneten ER-Polstern anpassende Form, sodass bei einer Drehung (aus der senkrechten Lage) der Statolithendruck auf das ER der Statocysten auf einer Seite momentan aufgehoben wird: auf der linken Seite bei einer Rechtsdrehung, auf der rechten Seite bei einer Linksdrehung, wie in Abbildung \ref{Graviperzeption} zu sehen ist.
 Dadurch erfolgt die Graviperzeption schneller, denn die Verlagerung der Wurzel hängt  mit der Aufhebung des Statolithendrucks auf die ER-Polster links oder rechts der Wurzelhaube zusammen \parencite[531f]{Luettge}. 
 
  \begin{figure}[H]
  	\centering 
  	\includegraphics[width = 0.5\linewidth]{bilder/Graviperzeption.jpeg}
- 	\caption{Statolithen und ER-Polster  \label{Graviperzeption}}
+ 	\caption{Statolithen und ER-Polster \parencite[533]{Luettge} \label{Graviperzeption}}
  \end{figure} 
 
 Dies ist aber nur der Fall bei Organen höherer Pflanzen, denn bei einer Einzelzelle, z.B einer \emph{Chara}-Rhizoide, erfolgt die Streckung nur durch Spitzenwachstum (einseitiges Wachstum der Zelle).
@@ -184,8 +184,6 @@ Bei senkrecht stehenden Pflanzen wandern positive geladene Ionen (hier: Protonen
 
 Diese Ionenbewegung wird als apoplastischer Strom bezeichnet, der das elektrisches Feld, das die Wurzel umgibt, erzeugt. Dieses Feld ist mit einer hochempfindlichen Vibrationselektrode nachweisbar. 
 Wird die Pflanze horizontal gelegt, so werden die Wurzeln gravitropisch gereizt. Dabei gelangen die Protonen nur noch in die untere Flanke der Wurzelspitze hinein und auf der Oberseite hinaus, wodurch auch das elektrische Feld sich ändert \parencite[502f]{Nultsch}.
-
-
 
 Dieses durch der Graviperzeption entstandene Signal kann nur in der Streckungszone hinter der Wurzelspitze aufgenommen werden. Kommt das Signal an, so setzt die Krümmung ein, indem die Flanken anfangen, ungleich zu wachsen. Damit ist feststellbar, dass der Perzeptions- und Reaktionsort getrennt sind.
 
