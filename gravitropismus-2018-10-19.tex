@@ -4,7 +4,7 @@
 %a4paper, 
 11pt, 
 ngerman,
-listof=totoc,
+listof=totocnumbered,
 oneside,
 %bibliography=totoc,
 bibliography=totocnumbered,
@@ -35,12 +35,21 @@ abstracton
 %}
 %\makeatother
 
+\makeatletter
+\newcommand \Dotfill {\leavevmode \cleaders \hb@xt@ .22em{\hss .\hss }\hfill \kern \z@}
+\makeatother
+
 \usepackage[a4paper
-,showframe
-,top=2.5cm
+%,showframe
+,top=1.1cm
 ,bottom=2.5cm
 ,left=3.5cm
 ,right=2.5cm
+,headsep=0.775cm, 
+,headheight=0.625cm, 
+%,top=1.2cm 1.2 + .75 + 1.05 = 3; 3.5 = 1.225 + 0.875 + 1.4; 2.5 = 1 + .625 + .875
+,includehead
+%,headskip=1.25cm
 ]{geometry}
 
 \usepackage[
@@ -60,7 +69,7 @@ style=authoryear-ibid,
 \begin{document}
 	
 
-\includepdf[pages={1}]{1.pdf}
+\includepdf[pages={1}]{2.pdf}
 
 \begingroup
 \renewcommand*{\chapterpagestyle}{empty}
@@ -73,10 +82,13 @@ style=authoryear-ibid,
 \renewcommand\abstractname{Abstract}
 \begin{abstract}
 
-Gravitropismus ist im 19.Jahrhundert entdeckt worden und ist seit dem ein Thema, das heutzutage ein eigenes Forschungsgebiet darstellt. Allgemein ist bekannt, dass Pflanzen sich nach der Schwerkraft orientieren, um Richtung Licht zu wachsen. Jedoch ist es für das menschliche Auge nicht erkennbar, was für Prozesse und Reaktionen in der Pflanze geschehen. Teile des Mysteriums sind  erforscht, veröffentlicht und stellen das wissenschaftliche Fundament dieser Arbeit dar.
+Gravitropismus ist im 19. Jahrhundert entdeckt worden und ist seitdem ein Thema, das heutzutage ein eigenes Forschungsgebiet darstellt. Pflanzen orientieren sich nach der Schwerkraft, um in Richtung des Lichts ({\glqq nach oben\grqq}) bzw. in Richtung der Nährstoffe ({\glqq nach unten\grqq}) zu wachsen. Die dafür verantwortlichen Mechanismen stellen ein aktuelles Forschungsgebiet dar und bilden die Grundlage der vorliegenden Arbeit. 
 
-Gravitropismus folgt in drei Schritten ab. Zuerst wird ein verursachter Reiz durch die Statolithen aufgenommen, der in ein Signal umgewandelt wird. Im zweiten Schritt erfolgt dann die Signaltransduktion, wodurch Pflanzenhormone (Auxin oder Gibberelline) aktiviert werden. Diese Hormone führen dazu, dass die Pflanze sich anfänglich krümmt, was den dritten Schritt darstellt.
-Diese Bewegung lässt sich experimentell verfolgen.
+Zunächst wird fachliche Analyse der Thematik Gravitropismus durchgeführt. Dabei werden grundlegende Begriffe eingeführt und anschließend auf die Reizaufnahme bei Pflanzen sowie auf die pflanzliche Signaltransduktion und das differenzielle Wachstum eingegangen. 
+
+Im praktischen Teil der Arbeit erfolgt der experimentelle Nachweis von Gravitropismus an \emph{Lepidium sativum} unter Haushaltsbedingungen; hierfür wird ein selbstständig konstruierter Klinostat verwendet. Das erfolgreich durchgeführte Experiment wird beschrieben und die Ergebnisse aufgearbeitet. 
+
+Abschließend wird auf die Bedeutung von Gravitropismus eingegangen und es werden mögliche weiterführende experimentelle Ansätze in einem Ausblick diskutiert. 
 	
 \end{abstract}
 
@@ -86,110 +98,99 @@ Diese Bewegung lässt sich experimentell verfolgen.
 
 \chapter{Gravitropismus als wichtige Pflanzeneigenschaft}
 
-Viele Pflanzen sind an die Erde festgebundene Organismen, die seit ihrer Keimung ihr ganzes Leben an einem Ort verbringen. Wurzeln verankern die Pflanzen an die Erde und versorgen diese mit Mineralionen und Wasser. Sprossen dagegen wachsen oberhalb der Erde, wo sie Photosynthese betreiben können. Damit Wurzeln und Sprossen von Anfang an in eine abgestimmte Richtung wachsen, sorgt die Fähigkeit, sich nach der Schwerkraft zu orientieren. Diese Fähigkeit wird als Gravitropismus bezeichnet \parencite[2]{Masson2002}. 
+Viele Pflanzen sind an die Erde festgebundene Organismen, die ab ihrer Keimung ihr ganzes Leben an einem Ort verbringen. Wurzeln verankern die Pflanzen an die Erde und versorgen sie mit Mineralionen und Wasser. Sprossen dagegen wachsen oberhalb der Erde, wo sie Photosynthese betreiben können. Wurzeln und Sprossen orientieren sich während dem Wachstum unter anderem an der Schwerkraft---diese Fähigkeit wird als Gravitropismus bezeichnet \parencite[2]{Masson2002}. 
 
-Gravitropismus, als Forschungsgebiet, wurde vor zweihundert Jahren anerkannt. 
-Es ist gegenwärtig ein aktives Forschungsbereich. Zu diesem Thema werden viele aktuelle Publikationen veröffentlicht. Zum Beispiel beschäftigt sich eine Gruppe von Naturwissenschaftlern mit Gravitropismus in Bezug auf die Landwirtschaft, um das Potenzial der Pflanze auszuschöpfen. Sie ist dafür verantwortlich, dass sich das Gewächs nach einem Unwetter wieder aufrichtet und weiter wächst \parencite[343]{Chen1999}.
+Gravitropismus wurde vor zweihundert Jahren als biologisches Phänomen anerkannt und bleibt bis heute ein aktiver Forschungsbereich, was auch an der Vielzahl der wissenschaftlichen Veröffentlichungen erkennbar ist. Zum Beispiel beschäftigt sich eine Gruppe von Naturwissenschaftlern mit Gravitropismus in Bezug auf die Landwirtschaft, um das Potenzial der Pflanze auszuschöpfen. Gravitropismus ist dafür verantwortlich, dass sich das Gewächs nach einem Unwetter wieder aufrichtet und weiter wächst \parencite[343]{Chen1999}.
 
-Die nachfolgende Arbeit wird sich mit den Fragen beschäftigen, was Gravitropismus ist und inwiefern es sich experimentell nachweisen lässt. Die erste Frage wird im anfänglichem Teil der fachlichen Analyse geklärt und die zweite Frage erläutet das Experiment.
+Die vorliegende Arbeit erarbeitet zunächst die theoretischen Grundlagen des Gravitropismus, indem sie wichtige Fachbegriffe einführt und die Reizaufnahme sowie die Signaltransduktion bei Pflanzen bespricht. 
 
-Der erste Teil der Arbeit klärt Fragen zur fachlichen Analyse und der zweite Teil der Arbeit erläutert das Experiment. 
+Anschließend wird im experimentellen Teil der Arbeit der Gravitropismus bei Kresse (\emph{Lepidium sativum}) mithilfe eines Klinostats nachgewiesen und die Ergebnisse erläutert. 
 
-
-
+Im abschließenden Teil der Arbeit werden mögliche weiterführende experimentelle Ansätze besprochen und es wird auf die Bedeutung von Gravitropismus in der Landwirtschaft eingegangen.
 
 %Mit Anführungszeichen: {\glqq Term mit\grqq} 
 
-
-
 \chapter{Fachliche Analyse der Thematik Gravitropismus}
 
-In der vorliegenden Arbeit wird die Theorie des Gravitropismus kurz geklärt und dann im experimentellen Teil nachgewiesen. Zuerst werden für den Gravitropismus grundlegende Begriffe aus der Botanik geklärt, um die Reizaufnahme, die Signaltransduktion und das darauf folgende differenzielles Wachstum besser verstehen zu können.  
+Um ein grundlegendes theoretisches Verständnis des Gravitropismus zu schaffen, werden zunächst die für den Gravitropismus grundlegenden Begriffe aus der Botanik erläutert. Dann werden Reizaufnahme, Signaltransduktion und differenzielles Wachstum als wichtige Elemente des Gravitropismus näher beschrieben. 
 
-
-
-\section{ Gravitropismus grundlegende Begriffe aus der Botanik}
+\section{Wichtige Begriffe aus der Botanik}
 
 \subsection{Morphologie der Pflanze}
 
-Um die Prozesse des Gravitropismus zu verstehen, ist es wichtig den Aufbau der Pflanze zu kennen, um die Vorgänge des Gravitropismus in den verschiedenen Bereichen der Pflanze verfolgen zu können.
-
+Um die Prozesse des Gravitropismus zu verstehen, ist es wichtig, den Aufbau der Pflanze zu kennen, um die Vorgänge des Gravitropismus in den verschiedenen Bereichen der Pflanze beschreiben zu können.
 
 \begin{figure}[H]
 	\centering 
 	\includegraphics[width = 0.3\linewidth]{images/Spross.pdf}
-	\caption{1. Wurzelspitze, 2. Hauptwurzel mit Seitenwurzeln der ersten Ordnung, 3. Sprossachse, 4. Sprossspitze (Apex), 5. Koleoptil (Schutzorgan)}
+	\caption{Grober Aufbau der Pflanze, links als Keimling, rechts als ausgewachsene Pflanze. Beschriftung: 1---Wurzelspitze, 2---Hauptwurzel mit Seitenwurzeln der ersten Ordnung, 3---Sprossachse, 4---Sprossspitze, 5---Koleoptil (Schutzorgan).}
 \end{figure}
 
-Am Anfang der Entwicklung einer Pflanze, wenn sie noch ein Keimling ist, wird sie von einem Schutzorgan, dem \emph{Koleoptil}, umgeben, das sehr sensibel ist. Bei ausgewachsenen Pflanzen ist sie nicht mehr vorhanden. 
-Ausgewachsene Pflanzen bestehen aus einer Sprossachse, an der am oberen Ende sich die Sprossspitze (\emph{Apex}) befindet. Am unteren Ende fängt die Hauptwurzel an, von der sich Seitenwurzeln, auch \emph{Adventivwurzeln} genannt, bilden. Am Ende der Hauptwurzel befindet sich die Wurzelspitze, hinter der sich die Streckungszone befindet. An der Sprossspitze sowie an der Wurzelspitze befinden sich Primärmeristeme (Bildungsgewebe). 
+Am Anfang der Entwicklung einer Pflanze, wenn sie noch ein Keimling ist, wird sie von einem sehr sensiblen Schutzorgan, dem \emph{Koleoptil}, umgeben. Bei ausgewachsenen Pflanzen ist es nicht mehr vorhanden. 
+
+Ausgewachsene Pflanzen bestehen aus einer Sprossachse, an dessen oberen Ende sich die Sprossspitze befindet. Am unteren Ende setzt die Hauptwurzel an, von der sich Seitenwurzeln, auch \emph{Adventivwurzeln} genannt, abzweigen. Am Ende der Hauptwurzel befindet sich die Wurzelspitze, hinter der sich die Streckungszone befindet.Die Streckungszone ist ein Bereich, in dem sich die Wurzelzellen durch Streckungswachstum vergrößern. Dadurch wird die Wurzelspitze weiter in die Erde vorgeschoben. An der Sprossspitze sowie an den Wurzelspitzen befinden sich \emph{Apikalmeristeme}, die eine Anhäufung sich teilender Zellen sind. Sie bilden Seitenzweige oder Blätter bei Sprossen und neue Wurzelzellen bei Wurzeln \parencite[1009--1011]{campbell}. 
 
 \subsection{Arten des Gravitropismus}
 
 Beim Gravitropismus, auch genannt Geotropismus, werden drei Bewegungsarten unterschieden: \emph{Positiv gravitrop},  \emph{negativ gravitrop} und \emph{transversalgravitrop}.
-Positiv gravitrop bedeutet, dass das Wachstum der Organe, wie zum Beispiel Wurzeln, Rhizoide (wurzelähnliche Strukturen), Moose oder Farnprothallien, zur Schwerkraftquelle hin (nach unten zur Erdmitte) erfolgt.
-Negativ gravitrope Organe dagegen, wie Sprossen, Sporangienträger der Schimmelpilze der Gattung \emph{Mucor} oder Fruchtkörper mancher Pilze wachsen von der Schwerkraftquelle entgegengesetzt (nach oben).
 
-Diese zwei Wachstumsrichtungen werden auch als \emph{Orthogravitropismus} bezeichnet, da sie beide parallel zur Schwerkraft wachsen \parencite[546]{Jacob}.
-Seitenwurzeln der ersten Ordnung (Nebenwurzeln, die von der Hauptwurzel entspringen) und zahlreiche Seitenzweige sowie Blätter wachsen \emph{ transversalgravitrop}: entweder horizontal oder quer nach unten in einem bestimmten Winkel \parencite[449]{Strasburger}. 
+Positiv gravitrop bedeutet, dass das Wachstum der Organe, wie zum Beispiel Wurzeln, Rhizoide (wurzelähnliche Strukturen), Moose oder Farnprothallien, zur Schwerkraftquelle hin (nach unten zur Erdmitte) erfolgt. Negativ gravitrope Organe dagegen, wie Sprossen, Sporangienträger der Schimmelpilze der Gattung \emph{Mucor} oder Fruchtkörper mancher Pilze wachsen von der Schwerkraftquelle entgegengesetzt (nach oben). Diese zwei Wachstumsrichtungen werden auch als \emph{Orthogravitropismus} bezeichnet, da sie beide parallel zur Schwerkraft wachsen \parencite[546]{Jacob}.
+
+Seitenwurzeln der ersten Ordnung (Nebenwurzeln, die von der Hauptwurzel entspringen) und zahlreiche Seitenzweige sowie Blätter wachsen \emph{transversalgravitrop}: entweder horizontal oder quer nach unten in einem bestimmten Winkel \parencite[449]{Strasburger}. 
 
 \begin{figure}[H]
 \centering 
- \includegraphics[width = 0.3\linewidth]{images/gravitrop_reagierende_Pflanze.jpg}
- \caption{Gravitrop reagirende \emph{Arabidopsis thaliana} \parencite[5]{Masson2002} \label{gravitrop_reagierende_Pflanze}}
+ \includegraphics[width = 0.9\linewidth]{images/gravitrop_reagierende_Pflanze2.pdf}
+ \caption{Gravitrop reagirende \emph{Arabidopsis thaliana} \parencite[5]{Masson2002}. Teilabbildung A zeigt den Zustand am Anfang, Teilabbildung B zeigt den Zustand nach vollzogener gravitropischer Reaktion. \label{gravitrop_reagierende_Pflanze}}
 \end{figure} 
  
-Legt man eine Pflanze quer, so werden sich Wurzeln und Spross krümmen, bis sie senkrecht stehen und wieder positiv bzw. negativ gravitrop wachsen \parencite[528]{Luettge}, wie in der Abbildung \ref{gravitrop_reagierende_Pflanze}  erkennbar ist.
+Legt man eine Pflanze quer, so werden sich Wurzeln und Spross krümmen, bis sie senkrecht stehen und wieder positiv bzw. negativ gravitrop wachsen \parencite[528]{Luettge}. Abbildung \ref{gravitrop_reagierende_Pflanze} zeigt diesen Prozess bei \emph{A. thaliana}. 
 
-\section{Reizaufnahme}
+\section{Reizaufnahme bei Pflanzen}
 
-Damit eine gravitrope Krümmung entstehen kann, werden zuvor Reize durch \emph{Statolithen}, schwere Körperteilchen oder Organelle in bestimmten Zellen des Sprosses (Abbildung \ref{Statolithen}), der \emph{Koleoptil}-, und der Wurzelspitzen aufgenommen. Es handelt sich dabei meist um \emph{Amyloplasten}, die aus Stärke bestehen \parencite[530]{Luettge}.
+Damit eine gravitrope Krümmung entstehen kann, werden zuvor Reize durch \emph{Statolithen} aufgenommen. Statolithen sind schwere Organelle in bestimmten Zellen des Sprosses sowie der Koleoptil-- und Wurzelspitzen; Abbildung \ref{Statolithen} zeigt ihren Aufbau und Wirkungsweise. Es handelt sich dabei meist um \emph{Amyloplasten}, die aus Stärke bestehen \parencite[530]{Luettge}.
 
 \begin{figure}[H]
 	\centering 
-	\includegraphics[width = 0.6\linewidth]{images/Statolithen2.png}
-	\caption{Statolithen \parencite[345]{Chen1999} \label{Statolithen}}
+	\includegraphics[width = 0.9\linewidth]{images/Statolithen2.png}
+	\caption{Statolithen \parencite[345]{Chen1999}. Teilabbildung a zeigt eine Mikroskopaufnahme von Statolithen bei \emph{A. thaliana}. Teilabbildungen b und c zeigen die gravitrope Wirkungsweise von Statolithen, die auf Umlagerung der Amyloplasten bei Veränderung des Schwerkraftvektors beruht. \label{Statolithen}}
 \end{figure} 
 
-Entscheidend ist der Stärkegehalt  der Amyloplasten, denn ohne ihn geht die gravitrope Reaktionfähigkeit verloren, wobei das Längenwachstum der Wurzeln weiterhin unbeeinflusst bleibt.
+Entscheidend ist der Stärkegehalt der Amyloplasten, denn ohne ihn geht die gravitrope Reaktionsfähigkeit verloren, wobei das Längenwachstum der Wurzeln weiterhin unbeeinflusst bleibt.
 Die Stärke aus den Statolithenamyloplasten kann man durch experimentelle Eingriffe, zum Beispiel durch Kühlung, entfernen \parencite[452]{Strasburger}.
 
-Die zahlreich vorhandenen Statolithen befinden sich in Zellen (\emph{Statocysten}), die die Graviperzeption ermöglichen. Kommen Statocysten in größeren Mengen vor, so bilden sie meist ein Gewebe, das als \emph{Statenchyme} bezeichnet wird.
-Diese Stärke enthaltenden Bereiche findet man bei den Wurzelhauben und bei Stärkescheiden der Sprossachsen.  
-Statolithen üben einen Druck auf Gravisensoren aus, wenn sie von der Schwerkraft beeinflusst werden. Wird die Lage der Pflanzen und ihrer Zellen verändert, so führt dies zu einer Änderung der Druckwirkung, wodurch die Graviperzeption ermöglicht wird \parencite[501--502]{Nultsch}.
+Die zahlreich vorhandenen Statolithen befinden sich in Zellen (\emph{Statocysten}), die die Graviperzeption ermöglichen. Kommen Statocysten in größeren Mengen vor, so bilden sie meist ein Gewebe, das als \emph{Statenchyme} bezeichnet wird. Diese Stärke enthaltenden Bereiche findet man in Wurzelspitzen und Innenzellschichten der Sprossachsen \parencite[501--502]{Nultsch}.  
+
+
+Bei Einzelzellen, z.B einer \emph{Chara}-Rhizoide werden Amyloplasten durch {\glqq Glanzkörper\grqq} ersetzt, die die Funktion der Statolithen übernehmen, da Einzelzellen keine Stärke enthalten. Diese in \emph{Vacuolen} liegenden Einschlusskörper besitzen einen hohes spezifisches Gewicht, da sie aus \ce{BaSO4} bestehen.
+
+Ihre Streckung erfolgt nur durch Spitzenwachstum (einseitiges Wachstum der Zelle).
+\emph{Dictyosomen} (flache, membranumhüllte Hohlräume in der Zelle) synthetisieren beim Spitzenwachstum Membran- und Zellwandbausteine für den Aufbau der wachsenden Rhizoidwand. Dieses Material wird in \emph{Vesikel} zur Wurzelspitze transportiert.
+Wegen der Verlagerung der {\glqq Glanzkörper\grqq} auf die Unterseite, versperren sie den Weg für die Vesikeln. Sie müssen deswegen auf der Oberseite hindurch kommen, bewirken aber somit ein verstärktes Wandwachstum (positiver Gravitropismus) \parencite[453--454]{Strasburger}.
+  
 
  \begin{figure}[H]
  	\centering 
- 	\includegraphics[width = 0.6\linewidth]{images/Graviperzeption.jpeg}
+ 	\includegraphics[width = 0.9\linewidth]{images/WhatsApp Image 2018-11-05 at 02.11.59.jpeg}
  	\caption{Statolithen und ER-Polster \parencite[533]{Luettge} \label{Graviperzeption}}
  \end{figure} 
+ 
+Bei Organen höherer Pflanzen ruhen Statolithen in den Statocysten auf der Membran des \emph{endoplasmatischen Retikulums} (ER).
 
-Statolithen ruhen auf den {\glqq Polster\grqq} von Membranen des \emph{endoplasmatischen Retikulums} (ER). Dabei haben die Statocysten eine zu den angeordneten ER-Polstern anpassende Form, sodass bei einer Drehung (aus der senkrechten Lage) der Statolithendruck auf das ER der Statocysten auf einer Seite momentan aufgehoben wird: auf der linken Seite bei einer Rechtsdrehung, auf der rechten Seite bei einer Linksdrehung, wie in Abbildung \ref{Graviperzeption} zu sehen ist.
+ Dabei haben die Statocysten eine zu den angeordneten ER-Polstern angepasste Form, sodass bei einer Drehung (aus der senkrechten Lage) der Statolithendruck auf das ER der Statocysten auf einer Seite momentan aufgehoben wird: auf der linken Seite bei einer Rechtsdrehung, auf der rechten Seite bei einer Linksdrehung, wie in Abbildung \ref{Graviperzeption} zu sehen ist.
 Dadurch erfolgt die Graviperzeption schneller, denn die Verlagerung der Wurzel hängt  mit der Aufhebung des Statolithendrucks auf die ER-Polster links oder rechts der Wurzelhaube zusammen \parencite[531--532]{Luettge}. 
-
-Dies ist aber nur der Fall bei Organen höherer Pflanzen, denn bei einer Einzelzelle, z.B einer \emph{Chara}-Rhizoide, erfolgt die Streckung nur durch Spitzenwachstum (einseitiges Wachstum der Zelle).
-\emph{Dictyosomen} (flache, membranumhüllte Hohlräume in der Zelle) synthetisieren dabei Membran- und Zellwandbausteine unter dem Bereich der wachsenden Spitze und transportieren  die entstandenen \emph{Vesikel}.
-
-Vesikel wandern auf der Oberseite, da beim Verlagern der Statolithen auf die Unterseite, der Weg dort damit gesperrt wird. Bei der Oberseite bewirken sie somit ein verstärktes Wandwachstum, also einen positiven Gravitropismus.
-
-Bei gravitrop reagierenden Pilzen werden Amyloplasten durch {\glqq Glanzkörper\grqq} ersetzt, die die Funktion der Statolithen übernehmen, da Pilze keine Stärke enthalten. Diese in \emph{Vacuolen} liegenden Einschlusskörper besitzen einen hohes spezifisches Gewicht, da sie aus \ce{BaSO4} bestehen \parencite[453--454]{Strasburger}.
-
-Zusammengefasst lässt es sich sagen, dass durch die Verlagerung der Statolithen ein Druck auf die ER-Polster verursacht wird, wodurch eine schnellere Graviperzeption ermöglicht wird. Dies ist der Fall bei Organen höherer Pflanzen.
-Bei Einzelzellen gibt es nur ein Spitzenwachstum, dass durch die Verlagerung der Glaskörperchen, die die Funktion der Statolithen ersetzen, hervorgerufen wird.
-
-
 
 
 \section{Signaltransduktion und differenzielles Wachstum}
 
-\subsection{Teilnahme des Calciums bei der Signaltransduktion}
+\subsection{Funktion des Calciums bei der Signaltransduktion}
 
 Die Signalübermittlung durch den direkten Kontakt zwischen Amyloplasten und ER wird als \emph{gravisensorische Transduktion} bezeichnet.
 Durch den Druck der Amyloplasten auf die ER-Membranen wird ein \ce{Ca^{2+}}-Efflux (das Austreten von Molekülen oder Ionen an der Zellmembran) aus dem ER verursacht.
 Dadurch wird die lokale \ce{Ca^{2+}}-Konzentration im  \emph{Cytoplasma} erhöht. 
 Bereits ein Druck auf eine einzige ER-Zysterne reicht aus, um einen Efflux zu verursachen.
 
-\subsection{Teilnahme des Elektronischen Feldes bei der Signaltransduktion}
+\subsection{Funktion des elektronischen Feldes bei der Signaltransduktion}
 
 Wichtiger bei der Signalumwandlung sind jedoch die Änderungen des elektrischen Feldes, dass die Wurzel umgibt.
 Bei senkrecht stehenden Pflanzen wandern positive geladene Ionen (hier: Protonen) in die Wurzelspitze ein und treten im Bereich der Zellstreckzone wieder aus.
@@ -206,7 +207,7 @@ Dieses durch der Graviperzeption entstandene Signal kann nur in der Streckungszo
 \end{figure} 
 
 
-Für diese Reaktion sind Präsentationszeiten(?) des Reizes wichtig. Sie liegen meist zwischen 2 und 85 Minuten. Das dauert viel länger, als die kürzesten Reizeinwirkungen, die noch wahrgenommen werden können und unter 30 Sekunden liegen. 
+Für diese Reaktion sind Eindauerzeiten des Reizes wichtig. Sie liegen meist zwischen 2 und 85 Minuten. Das dauert viel länger, als die kürzesten Reizeinwirkungen, die noch wahrgenommen werden können und unter 30 Sekunden liegen. 
 Somit wird bei jeder kleinen und kurzen Reizeinwirkung eine Vollführung der Krümmungsbewegung vermieden. Das ist wichtig für Pflanzen, um zum Beispiel eine gravitropische Reaktion auf eine Windeinwirkung zu verhindern \parencite[531]{Luettge}.
 
 
@@ -253,7 +254,7 @@ Wie dargelegt, ist Gravitropismus ein lebenswichtiges Resultat eines komplexen u
 
 \section{Methoden}
 
-\subsection{\emph{Lepidium sativum} - Kresse}
+\subsection{\emph{Lepidium sativum} (Kresse)}
 
 Für das Experiment wurde die \emph{Lepidium sativum} (Kresse) genommen. Sie ist eine schnellwüchsige Pflanze und kann auf jedem lockeren, durchlässigen Gartenboden wachsen (der Firma Kiepenkerl).
 
@@ -396,8 +397,12 @@ Hier anzuführen sind: Markus Braun; Zygmunt Hejnowicz; Rujin Chen, Elizabeth Ro
 \chapter {Schlusserklärung}
 
 Ich erkläre, dass ich die Seminararbeit ohne fremde Hilfe angefertigt und nur die im Literaturverzeichnis angeführte Quellen und Hilfsmitteln benützt habe.
+\\
+\\
 
-
-Ort Datum Unterschrift des Schülers 
+\setlength\tabcolsep{0pt}\noindent\begin{tabular}{p{.2\textwidth} p{.01\textwidth} p{.02\textwidth} p{.2\textwidth} p{.10\textwidth} p{.47\textwidth}}
+	\Dotfill & \hfill, & & \Dotfill &  & \Dotfill \\ 
+	Ort & & & Datum &  & Unterschrift des Schülers / der Schülerin \\
+\end{tabular}
 
 \end{document}
