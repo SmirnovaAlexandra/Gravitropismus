@@ -1,13 +1,18 @@
-\documentclass[aspectratio=169]{beamer}
+\documentclass[aspectratio=169
+%, handout
+]{beamer}
+%\documentclass[handout]{beamer}
 \usetheme{default}
 
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage{graphicx}
 \usepackage{csquotes}
-
+\usepackage{siunitx}
+\usepackage{mhchem}
 \usepackage{lmodern}
-
+\usepackage{subfig}
+ 
 %\usepackage{scrextend}
 %\changefontsizes{18pt}
 
@@ -35,6 +40,7 @@ style=authoryear-ibid,
 %\subject{}
 
 \setbeamercovered{transparent}
+%\setbeamercovered{invisible}
 %\setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{section in toc}[sections numbered]
 \setbeamertemplate{subsection in toc}[subsections numbered]
@@ -44,179 +50,199 @@ style=authoryear-ibid,
 \useoutertheme{infolines}
 
 \begin{document}
+	
 	\maketitle
 	
-	\begin{frame}
+	\begin{frame}[<+(1)->]
+
 		\frametitle{Gliederung}
-		\tableofcontents
+		\tableofcontents[pausesubsections,pausesections]
+		
 	\end{frame}
 	
 	\section{Grundlagen von Gravitropismus}
 
 	
-	\begin{frame}
-		\frametitle{Grundlagen von Gravitropismus}
+	\begin{frame}[<+(1)->]
+		\frametitle{Gravitropismus}
 		\begin{figure}[H]
 			\centering 
 			\includegraphics[width = 0.75\linewidth]{images/gravitrop_reagierende_Pflanze2.pdf}
-			\caption{Gravitrop reagirende \emph{Arabidopsis thaliana} \parencite[5]{Masson2002}. Teilabbildung A zeigt den Zustand am Anfang, Teilabbildung B zeigt den Zustand nach vollzogener gravitropischer Reaktion. \label{gravitrop_reagierende_Pflanze}}
+			%\onslide<2->{\caption{Gravitrop reagierende \emph{Arabidopsis thaliana} \parencite[5]{Masson2002}. Teilabbildung A zeigt den Zustand am Anfang, Teilabbildung B zeigt den Zustand nach vollzogener gravitropischer Reaktion. \label{gravitrop_reagierende_Pflanze}}}
+			\caption{Gravitrop reagierende \emph{Arabidopsis thaliana} \parencite[5]{Masson2002}. Teilabbildung A zeigt den Zustand am Anfang, Teilabbildung B zeigt den Zustand nach vollzogener gravitropischer Reaktion. \label{gravitrop_reagierende_Pflanze}}
+			
 		\end{figure} 
 	\end{frame}
 	
 	\subsection{Arten von Gravitropismus}
 	
-	\begin{frame}
+	\begin{frame}[<+(1)->]
 		\frametitle{Arten von Gravitropismus}
-		1) Positiv gravitrop - zur Schwerkraftquelle hin (nach unten zur Erdmitte)
+\begin{enumerate}
+\item \textbf{Positiv gravitrop}: zur Schwerkraftquelle hin (nach unten zur Erdmitte)
+\item \textbf{Negativ gravitrop}: von der Schwerkraftquelle entgegengesetzt (nach oben)
+\item \textbf{Transversalgravitrop}: entweder horizontal oder quer nach unten in einem bestimmten Winkel
+\end{enumerate} 
 		
-		2) Negativ gravitrop - von der Schwerkraftquelle entgegengesetzt (nach oben)
-		
-		3) Transversalgravitrop - entweder horizontal oder quer nach unten in einem bestimmten Winkel 
-		
-	\end{frame}
+\end{frame}
 	
-	\subsection{Prozess der gravitropischen Krümmung}
+\subsection{Prozess der gravitropischen Krümmung}
 	
-	\begin{frame}
-		\frametitle{Prozess der gravitropischen Krümmung}
+\begin{frame}[<+(1)->]
+\frametitle{Prozess der gravitropischen Krümmung in Schritten}
 		
-		1) Reizaufnahme bei Pflanzen
+\begin{enumerate}
+\item \textbf{Reizaufnahme} 
+\item \textbf{Signaltransduktion}
+\item \textbf{Differenzielles Wachstum}
+\end{enumerate}
 		
-		2) Signaltransduktion
+\end{frame}
 		
-		3) Differenzielles Wachstum
+\subsubsection{Reizaufnahme bei Pflanzen durch Statolithen}
 		
-	\end{frame}
-		
-	\subsubsection{Reizaufnahme bei Pflanzen}
-		
-	\begin{frame}
-		\frametitle{Reizaufnahme bei Pflanzen}
+\begin{frame}[<+(1)->]
+\frametitle{Reizaufnahme bei Pflanzen}
 		\begin{figure}[H]
 			\centering 
 			\includegraphics[width = 0.75\linewidth]{images/Statolithen2.png}
-			\caption{Statolithen \parencite[345]{Chen1999}. Teilabbildung a zeigt eine Mikroskopaufnahme von Statolithen bei \emph{A. thaliana}. Teilabbildungen b und c zeigen die gravitrope Wirkungsweise von Statolithen, die auf Umlagerung der Amyloplasten bei Veränderung des Schwerkraftvektors beruht. \label{Statolithen}}
+			\caption{Statolithen \parencite[345]{Chen1999}. Teilabbildung \textbf{a} zeigt eine Mikroskopaufnahme von Statolithen bei \emph{A. thaliana}. Teilabbildungen \textbf{b} und \textbf{c} zeigen die gravitrope Wirkungsweise von Statolithen, die auf Umlagerung der Amyloplasten bei Veränderung des Schwerkraftvektors beruht. \label{Statolithen}}
 		\end{figure} 
 	\end{frame}
 
-\begin{frame}
-\frametitle{Reizaufnahme bei Pflanzen}
+% \begin{frame}[<+(1)->]
+% \frametitle{Reizaufnahme bei Pflanzen}
+% 
+% \begin{enumerate}
+% \item Reize durch Statolithen (Amyloplasten, die aus Stärke bestehen)
+% \item Statolithen in Statocysten (Statenchyme bei größeren Mengen der Statolithen) in Wurzelspitzen und Innenzellschichten der Sprossachse
+% \item Statolithen auf der Membran des endoplasmatischen Retikulums (ER)
+% \end{enumerate}
+% 
+% \end{frame}
 
-1) Reize durch Statolithen (Amyloplasten, die aus Stärke bestehen)
+% \begin{frame}[<+(1)->]
+% \frametitle{Reizaufnahme bei Pflanzen}
+% 
+%  \begin{figure}[H]
+% 	\centering 
+% 	\includegraphics[width = 0.55\linewidth]{images/Graviperzeption.jpeg}
+% 	\caption{Querlegen einer Wurzel der Kresse (\emph{Lepidium sativum}). Es erfolgt eine Graviperzeption, in der die Entlastung des Drucks der Membran des ER zu erkennen ist \parencite[533]{Luettge}. \label{Graviperzeption}}
+% \end{figure} 
+% 
+% \end{frame}
+			
+\subsubsection{Signaltransduktion}
+		
+% \begin{frame}[<+(1)->]
+% 		\frametitle{Signaltransduktion}	
+% \begin{enumerate}
+% \item Signalübermittlung durch Kontakt zwischen Amyloplasten und ER (gravisensorische Transduktion)
+% \item Funktion des Calciums:
+% \begin{itemize}
+% 	\item \ce{Ca^{2+}}-Efflux durch Druck der Amyloplasten auf die ER-Membran 
+% \item Erhöhung der lokalen \ce{Ca^{2+}}-Konzentration im Cytoplasma
+% \end{itemize}
+% \item Funktion des elektrischen Feldes:
+% \begin{itemize}
+% 	\item Elektrisches Feld (um die Wurzel herum) durch apoplastischen Strom (Ionenbewegung) 
+% \item Bei horizontaler Lage der Pflanze: Änderung des elektrischen Feldes durch die veränderte Richtung des apoplastischen Stroms
+% \end{itemize}
+% \item Aufnahme des entstandenen Signals (durch die Graviperzeption) in der Streckungszone hinter der Wurzelspitze
+% \item Einsetzung der Krümmung beim Ankommen des Signals (ungleiches Wachsen der Flanken)
+% \end{enumerate}
+% 		
+% \end{frame}
 
-2) Statolithen in Statocysten (Statenchyme bei größeren Mengen der Statolithen) in Wurzelspitzen und Innenzellschichten der Sprossachse
+\begin{frame}[<+(1)->]
+\frametitle{Gravisensorische Signaltransduktion nach Reizaufnahme}
 
-3) Statolithen auf der Membran des endoplasmatischen Retikulums (ER)
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Reizaufnahme bei Pflanzen}
-
- \begin{figure}[H]
-	\centering 
-	\includegraphics[width = 0.55\linewidth]{images/Graviperzeption.jpeg}
-	\caption{Querlegen einer Wurzel der Kresse (\emph{Lepidium sativum}). Es erfolgt eine Graviperzeption, in der die Entlastung des Drucks der Membran des ER zu erkennen ist \parencite[533]{Luettge}. \label{Graviperzeption}}
-\end{figure} 
-
+\begin{enumerate}
+	\item Kontakt und Druck der Amyloplasten auf die ER-Membran
+	\item \ce{Ca^{2+}}-Efflux durch Druck der Amyloplasten auf die ER-Membran 
+	\item Erhöhung der lokalen \ce{Ca^{2+}}-Konzentration im Cytoplasma
+	\item Änderung des elektrischen Feldes, das die Wurzel umgibt
+	\begin{itemize}
+		\item Feld entsteht durch Ionenbewegung (\textbf{apoplastischer Strom})
+		\item Bei veränderter Pflanzenlage ändert sich die Ionenbewegung und damit das Feld
+	\end{itemize}
+	\item Aufnahme des entstandenen Signals in der Streckungszone hinter der Wurzelspitze
+	\item Einsetzung der Krümmung beim Ankommen des Signals (ungleiches Wachsen der Flanken)
+\end{enumerate}
 \end{frame}
 			
-	\subsubsection{Signaltransduktion}
-		
-	\begin{frame}
-		\frametitle{Signaltransduktion}
-		
-		1) Signalübermittlung durch Kontakt zwischen Amyloplasten und ER (gravisensorische Transduktion)
-		
-		1. Funktion des Calciums:
-		
-	    1.1 %\ce{Ca^{2+}}-Efflux durch Druck der Amyloplasten auf die ER-Membran 
-		
-		1.2 Erhöhung der lokalen %\ce{Ca^{2+}}-Konzentration im Cytoplasma
-		
-		2. Funktion des elektrischen Feldes:
-		
-		2.1 Elektrisches Feld (um die Wurzel herum) durch apoplastischen Strom (Ionenbewegung) 
-		
-		2.2 Bei horizontaler Lage der Pflanze: Änderung des elektrischen Feldes durch die veränderte Richtung des apoplastischen Stroms
-		
-		2) Aufnahme des entstandenen Signals (durch die Graviperzeption) in der Streckungszone hinter der Wurzelspitze
-		
-		3) Einsetzung der Krümung beim Ankommen des Signals (ungleiches Wachsen der Flanken)
-		
-		
-		
-	\end{frame}
-			
-	\subsubsection{Differenzielles Wachstum}
-		
-	\begin{frame}
-		\frametitle{Differenzielles Wachstum}
-		
-		Funktion der Auxine und Gibberelline
-		\begin{figure}[H]
-			\centering 
-			\includegraphics[width = 0.4\linewidth]{images/newdiff.pdf}
-			\caption{Flanken wachsen ungleich nach der Signaltransduktion. Linkes Bild: Flanken gleich groß (blau); rechtes Bild: unterschiedliche Größe der Flanken (rot und orange).}
-		\end{figure} 
-	\end{frame}
+\subsubsection{Differenzielles Wachstum}
 
-	\begin{frame}
+\begin{frame}[<+(1)->]
 \frametitle{Differenzielles Wachstum}
+%		\begin{figure}[H]
+%			\centering 
+%			\includegraphics[width = 0.3\linewidth]{images/newdiff.pdf}
+%			\caption{Flanken wachsen ungleich (differenziell) nach der Signaltransduktion. Linkes Bild: Flanken gleich groß (blau); rechtes Bild: unterschiedliche Größe der Flanken (rot und orange).}
+%		\end{figure} 
+\begin{figure}
+	\begin{minipage}[c]{0.4\textwidth}
+		\centering
+		\includegraphics[height=.6\textheight]{images/newdiff.pdf}
+	\end{minipage}\hfill
+	\begin{minipage}[c]{0.55\textwidth}
+		\centering
+		\caption{Flanken wachsen ungleich (differenziell) nach der Signaltransduktion. Linkes Bild: Flanken gleich groß (blau); rechtes Bild: unterschiedliche Größe der Flanken (rot und orange).} \label{diffwachs}
+	\end{minipage}
+\end{figure}
 
- 1) Funktion der Auxine (hier: Indolessigsäure): 
- 
- 1. Synthesierung des Auxins im Apikalmeristem
- 
- 2. Bewegung der Auxine vom Apikalmeristem bis zur Streckungszone für die Stimulierung des Zellwachstums
- 
- 2.1 Stimulierung der Protonenpumpe für die Ansäuerung der Zellwand 
- 
- 2.2 Aktiwierung der Expansine für die Auflockerung der Zellwand
- 
- 2.3 Erhöhte Ionenaufnahme in der Zelle und damit Erhöhung des osmotischen Drucks
- 
- 2.4 Mögliche Ausdehnung der Zellwand
- 
- 2) Funktion der Gibberelline:
- 
- 2.1 Zusammenwirken der Gibberelline mit Auxin bei der Zellstreckung
- 
- 2.2 Aktivierung der Enzyme für die Auflockerung der Zellwand und für den erleichterten Eintritt der Expansinen dahin
- 
- 
- 
- 
+\begin{itemize}
+	\item Wachstumssteuerung durch Auxine und Gibberelline (Pflanzenhormone)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[<+(1)->]
+\frametitle{Differenzielles Wachstum: Einfluss der Auxine}
+\begin{enumerate}
+\item \textbf{Synthese} des Auxins im Apikalmeristem 
+\item \textbf{Bewegung} der Auxine vom Apikalmeristem bis zur Streckungszone für die \textbf{Stimulierung des Zellwachstums}
+\item \textbf{Stimulierung der Protonenpumpe} für die Ansäuerung der Zellwand 
+\item \textbf{Aktivierung der Expansine} für die Auflockerung der Zellwand
+\item Erhöhte \textbf{Ionenaufnahme} in der Zelle und damit \textbf{Erhöhung des osmotischen Drucks}
+\item Mögliche \textbf{Ausdehnung der Zellwand}
+\end{enumerate}
 \end{frame}
 	
-	\section{Experimenteller Nachweis von Gravitropismus bei \protect\emph{Lepidium sativum}}
+\begin{frame}[<+(1)->]
+\frametitle{Differenzielles Wachstum: Einfluss der Gibberelline}
+\begin{enumerate}
+	\item Zusammenwirken der Gibberelline mit Auxin bei der \textbf{Zellstreckung}
+	\item \textbf{Aktivierung der Enzyme} für die \textbf{Auflockerung der Zellwand} und für den erleichterten Eintritt der Expansine
+\end{enumerate}
+\end{frame}
+
+\section{Experimenteller Nachweis von Gravitropismus bei \protect\emph{Lepidium sativum}}
 	
-	\begin{frame}
-		\frametitle{Experimenteller Nachweis von Gravitropismus bei \protect\emph{Lepidium sativum}}
+\begin{frame}[<+(1)->]
+\frametitle{Experimenteller Teil--Gliederung}
 		
-		1) Methoden
+\tableofcontents[currentsection, sections=2, pausesections, pausesubsections, subsectionstyle=show/show/shaded, subsubsectionstyle=show/show/show/shaded]
 		
-		1.1 Pflanzen, Materialien und Geräte
-		
-		1.2 Versuchmethodik
-		
-		2) Durchführung und Ergebnisse
-		
-		2.1 Vorbereitung 
-		
-		2.2 Ankeimen 
-		
-		2.3 Klinostat-Experiment mit Pflanzengruppe 2
-		
-		2.4 Ausrichtungs-Experiment mit Pflanzengruppe 3-5
-		
-		3) Diskussion
-		
-	\end{frame}	
+% \begin{enumerate}
+% \item Methoden
+
+% 	\item Pflanzen, Materialien und Geräte
+%   \item Versuchsmethodik
+
+% \item Durchführung und Ergebnisse
+% \item Vorbereitung 
+% \item Ankeimen 
+% \item Klinostat-Experiment mit Pflanzengruppe 2
+% \item Ausrichtungs-Experiment mit Pflanzengruppe 3-5
+% \item Diskussion
+% \end{enumerate}
+
+\end{frame}	
 	
 	\subsection{Methoden}
 	
-	\begin{frame}
+	\begin{frame}[<+(1)->]
 		\frametitle{Methoden}
 		\begin{figure}[H]
 			\centering 
@@ -228,183 +254,324 @@ style=authoryear-ibid,
 	
 	\subsubsection{Pflanzen, Material und Geräte}
 
-	\begin{frame}
+	\begin{frame}[<+(1)->]
 		\frametitle{Pflanzen, Material und Geräte}
-		1) Pflanzen - \protect\emph{Lepidium sativum}
-		
-		2) Klinostat
-		
-		3) Weitere Materialien: Anzuchtbehälter, Säckchen aus Stoffstück, Plastiktüte, Messzylinder aus Plastik, diverse Gegenstände (z.B. Holzwürfel) 
+\begin{enumerate}
+\item Verwendete Pflanze: \protect\emph{Lepidium sativum} (Kresse)
+\item Selbstgebautes Klinostat
+\item Weitere Materialien: Anzuchtbehälter, Säckchen aus Stoffstück, Plastiktüte, Messzylinder aus Plastik, diverse Gegenstände (z.B. Holzwürfel)
+\end{enumerate} 
 	\end{frame}
 
-%\begin{frame}
-%\frametitle{Pflanzen, Material und Geräte}
+\begin{frame}[<+(1)->]
+\frametitle{Pflanzen, Material und Geräte}
 
-%\begin{figure}[H]
-%\centering 
-%\includegraphics[width = 0.5\linewidth]{images/drawing-1.pdf}
-%\caption{Schematische Konstruktion des selbst gebauten Klinostats (seitliche Ansicht).
-%\end{figure} 
+% \begin{figure}[H]
+% 	\centering 
+% 	\includegraphics[width = 0.5\linewidth]{images/drawing-1.pdf}
+% 	\caption{Schematische Konstruktion des selbst gebauten Klinostats (seitliche Ansicht).}
+% 	\end{figure} 
 
-%\end{frame}
+\begin{figure}
+	\begin{minipage}[c]{0.49\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{images/drawing-1.pdf}
+	\end{minipage}\hfill
+	\begin{minipage}[c]{0.49\textwidth}
+		\centering
+		\caption{Schematische Konstruktion des selbst gebauten Klinostats (seitliche Ansicht). \\\textbf{1}: \textbf{Befestigungsplatte} (Holz, Dicke: 2cm)\\ \textbf{2}: \textbf{Netzteil} (Modell: MW1000GS, Eingang: 230V~50Hz 28W, Ausgang: 3-6-9-12V, 1000mA 12VA(max))\\ \textbf{3}: \textbf{Holzkeil}, um die Drehachse des Motors um ca. \ang{15} senkrecht zur Ebene anzuheben\\ \textbf{4}: \textbf{Motorbefestigung}\\ \textbf{5}: \textbf{Elektrogetriebemotor} MFA/Como Drills 919D SERIES, single ratio gearbox 3000:1 (Untersetzung 3000:1), 4.5 - 15V DC\\ \textbf{6}: \textbf{Elektromotorwelle}\\\textbf{7}: leere \textbf{Blechdose} mit Öffnung (wird mit einer Muffe an die Elektromotorwelle befestigt)\label{Klinstat1}.} 
+	\end{minipage}
+\end{figure}
+
+\end{frame}
 	
 	\subsubsection{Versuchsmethodik}
 	
-	\begin{frame}
+	\begin{frame}[<+(1)->]
 		\frametitle{Versuchsmethodik}
-		1) Pflanzengruppe 1: Kontrollgruppe
-		
-		2) Pflanzengruppe 2: Säckchen am Klinostat
-		
-		3) Pflanzengruppe 3: Anzuchttopf kopfüber
-		
-		4) Pflanzengruppe 4: Anzuchttopf horizontal am Boden
-		
-		5) Pflanzengruppe 5: Anzuchttopf mit Winkel zum Boden 
+\begin{enumerate}
+\item Pflanzengruppe 1: Kontrollgruppe
+\item Pflanzengruppe 2: Säckchen am Klinostat
+\item Pflanzengruppe 3: Anzuchttopf kopfüber
+\item Pflanzengruppe 4: Anzuchttopf horizontal am Boden
+\item Pflanzengruppe 5: Anzuchttopf gewinkelt am Boden 
+\end{enumerate}
 		
 	\end{frame}
 	
-	\subsection{Durchführung und Ergebnisse}
+\subsection{Durchführung und Ergebnisse}
 	
-	\begin{frame}
-		\frametitle{Durchführung und Ergebnisse}
+\begin{frame}[<+(1)->]
+\frametitle{Durchführung und Ergebnisse}
+\framesubtitle{Zeiteinteilung}
 		
-		1) Versuchstag 1 (28.05.2018): Vorbereitung
-		
-		2) Versuchstage 2–4 (29.–31.05.2018): Ankeimen
-		
-		3) Versuchstage 4–5 (31.–01.06.2018): Klinostat-Experiment mit Pflanzengruppe 2
-		
-		4) Versuchstage 6–7 (02.–03.06.2018): Ausrichtungs-Experiment mit Pflanzengruppe 3-5
-	\end{frame}
+\begin{enumerate}
+\item Versuchstag 1 (28.05.2018): Vorbereitung
+\item Versuchstage 2–4 (29.–31.05.2018): Ankeimen
+\item Versuchstage 4–5 (31.–01.06.2018): Klinostat-Experiment mit Pflanzengruppe 2
+\item Versuchstage 6–7 (02.–03.06.2018): Ausrichtungs-Experiment mit Pflanzengruppen 3-5
+\end{enumerate}
+\end{frame}
 	
-	\subsubsection{Vorbereitung, Ankeimen}
-	
-	\begin{frame}
-		\frametitle{Vorbereitung, Ankeimen}
-		1) Vorbereitung (Versuchstag 1, 28.05.2018):
-		
-	 	1.1 Bestimmung des Ortes
-			
-		1.2 Vorbereiten der vier Anzuchtbehälter + Säckchen 
-			
-		2) Ankeimen (Versuchstage 2-4, 29.–31.05.2018):
-		
-		Prozess der Keimung von Kressesamen, bis zu stabil gewachsenen Sprösslingen
-				
-		
-	\end{frame}
-	
-	\subsubsection{Klinostat-Experiment}
-	
-	\begin{frame}
-		\frametitle{Klinostat-Experiment}
-		
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.5\linewidth]{images/IMG_1083.JPG}
-	\caption{Sprossen vor Beginn des Klinostat-Experiments.\label{Foto 1}}	
-	\end{figure}	
-	
-	\end{frame}
+\subsubsection{Vorbereitung, Ankeimen}
 
-\begin{frame}
+\begin{frame}[<+(1)->]
+\frametitle{Vorbereitung, Ankeimen}
+\framesubtitle{Versuchstag 1, 28.05.2018}
+		
+\begin{enumerate}
+\item Bestimmung des Versuchsorts
+\item Vorbereiten der vier Anzuchtbehälter + Säckchen 
+\item Ankeimen (Versuchstage 2-4, 29.–31.05.2018):
+\item Prozess der Keimung von Kressesamen, bis zu stabil gewachsenen Sprösslingen
+\end{enumerate}
+\end{frame}
+	
+\subsubsection{Klinostat-Experiment}
+
+\begin{frame}%[<+(1)->]
 \frametitle{Klinostat-Experiment}
-
-\begin{figure}[H]
-	\centering		 \includegraphics[width=0.5\linewidth]{images/IMG_1073.JPG}	\caption{Sprossen nach Abschalten des Klinostats.\label{Foto 2}}
+\framesubtitle{INFORMATION}
+\begin{columns}
 	
-\end{figure}
+	\visible<2->{
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+	\centering
+\includegraphics[width=0.95\linewidth]{images/IMG_1083.JPG}
+\caption{Sprossen vor Beginn des Klinostat-Experiments.\label{Foto 1}}		
+			\end{figure}
+		\end{column}
+	}
+	\visible<3->{
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+	\centering		 
+\includegraphics[width=0.95\linewidth]{images/IMG_1073.JPG}	
+\caption{Sprossen nach Abschalten des Klinostats.\label{Foto 2}}
+			\end{figure}
+	\end{column}}
+\end{columns}
+\end{frame}
 
+% 	\begin{frame}[<+(1)->]
+% 		\frametitle{Klinostat-Experiment}
+% 		
+% 	\begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.5\linewidth]{images/IMG_1083.JPG}
+% 	\caption{Sprossen vor Beginn des Klinostat-Experiments.\label{Foto 1}}	
+% 	\end{figure}	
+% 	
+% 	\end{frame}
+% 
+% \begin{frame}[<+(1)->]
+% \frametitle{Klinostat-Experiment}
+% 
+% \begin{figure}[H]
+% 	\centering		 
+% 	\includegraphics[width=0.5\linewidth]{images/IMG_1073.JPG}	
+% 	\caption{Sprossen nach Abschalten des Klinostats.\label{Foto 2}}
+% 	
+% \end{figure}
+% \end{frame}
+
+
+\subsubsection{Ausrichtungs-Experiment}
+	
+\begin{frame}[<+(1)->]
+\frametitle{Ausrichtungs-Experiment mit Pflanzengruppen 3-5}
+\framesubtitle{Versuchstage 6-7, 02.–03.06.2018}
+	
+\begin{enumerate}
+\item Gruppe 3 parallel zum Boden
+\item Gruppe 4 kopfüber
+\item Gruppe 5 im Winkel von ca. \ang{45}
+\end{enumerate}
+	
+\end{frame}
+
+% \begin{frame}
+% \begin{columns}
+% 	\column{.5\textwidth}
+% 	\visible<1->{
+% 		1
+% 	}
+% 	\column{.5\textwidth}
+% 	\visible<2->{
+% 				\begin{figure}
+% 			\centering
+% 			\includegraphics[width=.9\textwidth]{images/A4/IMG_1396.JPG}
+% 			\caption{Sprossen am Versuchstag 7.\label{A47}}
+% 		\end{figure}
+% 	}
+% \end{columns}
+% \end{frame}
+
+\begin{frame}%[<+(1)->]
+\frametitle{Ausrichtungs-Experiment}
+\framesubtitle{INFORMATION}
+\begin{columns}
+	
+	\visible<2->{
+		\begin{column}{0.5\textwidth}
+		\begin{figure}
+			\centering
+			\includegraphics[width=.95\textwidth]{images/A4/IMG_1104.JPG}
+			\caption{Sprossen vor Neuausrichtung.\label{A41}}	
+		\end{figure}
+\end{column}
+}
+	\visible<3->{
+		\begin{column}{0.5\textwidth}
+		\begin{figure}
+			\centering
+			\includegraphics[width=.95\textwidth]{images/A4/IMG_1396.JPG}
+			\caption{Sprossen am Versuchstag 7.\label{A47}}
+		\end{figure}
+\end{column}}
+\end{columns}
 \end{frame}
 
 
-	\subsubsection{Ausrichtungs-Experiment}
-	
-	\begin{frame}
-		\frametitle{Ausrichtungs-Experiment}
-	Ausrichtungs-Experiment mit Pflanzengruppe 3-5 (Versuchstage 6-7, 02.–03.06.2018):
-	
-	1) Gruppe 3 parallel zum Boden
-	
-	2) Gruppe 4 kopfüber
-	
-	3) Gruppe 5 im Winkel von ca. %\ang{45}
-	
-\end{frame}
-	
+% \begin{frame}[<+(1)->]
+% \frametitle{Ausrichtungs-Experiment}
+% % \begin{figure}[H]
+% % \centering
+% % \includegraphics[width=0.45\linewidth]{images/A4/IMG_1104.JPG}
+% % \caption{Sprossen vor Neuausrichtung.\label{A41}}	
+% % \end{figure} 
+% 
+% \begin{figure}
+% 	\centering
+% 	\subfloat[First subfigure\label{fig:a}]{\includegraphics[width=3cm]{images/A4/IMG_1104.JPG}}\qquad
+% 	\subfloat[Second subfigure\label{fig:b}]{\includegraphics[width=3cm]{images/A4/IMG_1396.JPG}}
+% 	\caption{A figure}
+% 	\label{fig:1}
+% \end{figure}
+% 
+% \end{frame}
+% 
+% \begin{frame}[<+(1)->]
+% \frametitle{Ausrichtungs-Experiment}
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=0.45\linewidth]{images/A4/IMG_1396.JPG}
+% \caption{Sprossen am Versuchstag 7.\label{A47}}
+% \end{figure}
+% \end{frame}	
 
-\begin{frame}
+\begin{frame}%[<+(1)->]
 \frametitle{Ausrichtungs-Experiment}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.5\linewidth]{images/A4/IMG_1104.JPG}
-\caption{Sprossen vor Neuausrichtung.\label{A41}}	
-\end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Ausrichtungs-Experiment}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.5\linewidth]{images/A4/IMG_1396.JPG}
-\caption{Sprossen am Versuchstag 7.\label{A47}}
-\end{figure}
-\end{frame}	
+\framesubtitle{INFORMATION}
+\begin{columns}
 	
-\begin{frame}
-\frametitle{Ausrichtungs-Experiment}
-\begin{figure}[H]
+	\visible<2->{
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
 \centering
-\includegraphics[width=0.5\linewidth]{images/A3/IMG_1102.JPG}
+\includegraphics[width=0.95\linewidth]{images/A3/IMG_1102.JPG}
 \caption{Sprossen vor Neuausrichtung.\label{A31}}	
-\end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Ausrichtungs-Experiment}
-\begin{figure}[H]
-\includegraphics[width=0.5\linewidth]{images/A3/IMG_1398.JPG}
+			\end{figure}
+		\end{column}
+	}
+	\visible<3->{
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+\centering
+\includegraphics[width=0.95\linewidth]{images/A3/IMG_1398.JPG}
 \caption{Sprossen am Versuchstag 7.\label{A37}}
-\end{figure}
+			\end{figure}
+	\end{column}}
+\end{columns}
 \end{frame}
+	
+% \begin{frame}[<+(1)->]
+% \frametitle{Ausrichtungs-Experiment}
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=0.5\linewidth]{images/A3/IMG_1102.JPG}
+% \caption{Sprossen vor Neuausrichtung.\label{A31}}	
+% \end{figure}
+% \end{frame}
+% 
+% \begin{frame}[<+(1)->]
+% \frametitle{Ausrichtungs-Experiment}
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=0.5\linewidth]{images/A3/IMG_1398.JPG}
+% \caption{Sprossen am Versuchstag 7.\label{A37}}
+% \end{figure}
+% \end{frame}
 
-\begin{frame}
+\begin{frame}%[<+(1)->]
 \frametitle{Ausrichtungs-Experiment}
-\begin{figure}[H]
+\framesubtitle{INFORMATION}
+\begin{columns}
+	
+	\visible<2->{
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
 \centering
-\includegraphics[width=0.5\linewidth]{images/A5/IMG_1101.JPG}
+\includegraphics[width=0.95\linewidth]{images/A5/IMG_1101.JPG}
 \caption{Sprossen vor Neuausrichtung.\label{A51}}		
-\end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Ausrichtungs-Experiment}
-\begin{figure}[H]
+			\end{figure}
+		\end{column}
+	}
+	\visible<3->{
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
 \centering
-\includegraphics[width=0.5\linewidth]{images/A5/IMG_1397.JPG}	\caption{Sprossen am Versuchstag 7.\label{A57}}
-\end{figure}
+\includegraphics[width=0.95\linewidth]{images/A5/IMG_1397.JPG}	\caption{Sprossen am Versuchstag 7.\label{A57}}
+			\end{figure}
+	\end{column}}
+\end{columns}
 \end{frame}
 
+%\begin{frame}[<+(1)->]
+%\frametitle{Ausrichtungs-Experiment}
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=0.5\linewidth]{images/A5/IMG_1101.JPG}
+%\caption{Sprossen vor Neuausrichtung.\label{A51}}		
+%\end{figure}
+%\end{frame}
+%
+%\begin{frame}[<+(1)->]
+%\frametitle{Ausrichtungs-Experiment}
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=0.5\linewidth]{images/A5/IMG_1397.JPG}	\caption{Sprossen am Versuchstag 7.\label{A57}}
+%\end{figure}
+%\end{frame}
 
+\subsection{Diskussion und Fazit}
 	
-	\subsection{Diskussion und Fazit}
-	
-	\begin{frame}
-		\frametitle{Diskussion und Fazit}
+\begin{frame}[<+(1)->]
+\frametitle{Diskussion und Fazit}
 		
-	1) Besprechung der Abhängigkeit des gravitropen Effekts von verschiedenen Faktoren:
-	
-	Sprosslänge, Stärke des Reizes, übermäßiger Reiz, Lichteinwirkung und Reizkonkurrenz
-	
-	2) Unberücksichtigte Faktoren:
-	
-	Schwankungen in pflanzlichen Hormonen, unterschiedliche Samen, unterschiedliche initiale Wachstumsphasen, Umweltfaktoren wie Druck, Temperatur und Feuchtigkeit, Einflüsse durch das Nährmedium
-	
- 
-		
-		
+\begin{enumerate}
+\item Der gravitrope Effekt ist abhängig von verschiedenen Faktoren:
+
+\begin{itemize}
+	\item Sprosslänge 
+	\item Stärke des Reizes 
+	\item übermäßiger Reiz
+	\item Lichteinwirkung 
+	\item Reizkonkurrenz
+\end{itemize}
+
+\item Unberücksichtigte Faktoren:
+
+\begin{itemize}
+	\item Schwankungen in pflanzlichen Hormonen
+	\item unterschiedliche Samen
+	\item unterschiedliche initiale Wachstumsphasen
+	\item Umweltfaktoren wie Druck, Temperatur und Feuchtigkeit
+	\item Einflüsse durch das Nährmedium
+\end{itemize}
+
+\end{enumerate}
 \end{frame}	
-	
 
 \end{document}
