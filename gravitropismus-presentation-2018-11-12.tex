@@ -49,6 +49,13 @@ style=authoryear-ibid,
 
 \useoutertheme{infolines}
 
+
+\makeatletter
+\newcommand{\trickbeamer}{%
+	\advance\beamer@slideinframe by-1%
+}%
+\makeatother
+
 \begin{document}
 	
 	\maketitle
@@ -56,6 +63,8 @@ style=authoryear-ibid,
 	\begin{frame}[<+(1)->]
 
 		\frametitle{Gliederung}
+		\pause
+		\trickbeamer
 		\tableofcontents[pausesubsections,pausesections]
 		
 	\end{frame}
@@ -65,13 +74,15 @@ style=authoryear-ibid,
 	
 	\begin{frame}[<+(1)->]
 		\frametitle{Gravitropismus}
-		\begin{figure}[H]
-			\centering 
-			\includegraphics[width = 0.75\linewidth]{images/gravitrop_reagierende_Pflanze2.pdf}
-			%\onslide<2->{\caption{Gravitrop reagierende \emph{Arabidopsis thaliana} \parencite[5]{Masson2002}. Teilabbildung A zeigt den Zustand am Anfang, Teilabbildung B zeigt den Zustand nach vollzogener gravitropischer Reaktion. \label{gravitrop_reagierende_Pflanze}}}
-			\caption{Gravitrop reagierende \emph{Arabidopsis thaliana} \parencite[5]{Masson2002}. Teilabbildung A zeigt den Zustand am Anfang, Teilabbildung B zeigt den Zustand nach vollzogener gravitropischer Reaktion. \label{gravitrop_reagierende_Pflanze}}
-			
-		\end{figure} 
+			\visible<2->{
+\begin{figure}[H]
+	\centering 
+	\includegraphics[width = 0.75\linewidth]{images/gravitrop_reagierende_Pflanze2.pdf}
+	%\onslide<2->{\caption{Gravitrop reagierende \emph{Arabidopsis thaliana} \parencite[5]{Masson2002}. Teilabbildung A zeigt den Zustand am Anfang, Teilabbildung B zeigt den Zustand nach vollzogener gravitropischer Reaktion. \label{gravitrop_reagierende_Pflanze}}}
+	\caption{Gravitrop reagierende \emph{Arabidopsis thaliana} \parencite[5]{Masson2002}. Teilabbildung A zeigt den Zustand am Anfang, Teilabbildung B zeigt den Zustand nach vollzogener gravitropischer Reaktion. \label{gravitrop_reagierende_Pflanze}}
+\end{figure} 
+		}
+		
 	\end{frame}
 	
 	\subsection{Arten von Gravitropismus}
@@ -103,11 +114,13 @@ style=authoryear-ibid,
 		
 \begin{frame}[<+(1)->]
 \frametitle{Reizaufnahme bei Pflanzen}
-		\begin{figure}[H]
-			\centering 
-			\includegraphics[width = 0.75\linewidth]{images/Statolithen2.png}
-			\caption{Statolithen \parencite[345]{Chen1999}. Teilabbildung \textbf{a} zeigt eine Mikroskopaufnahme von Statolithen bei \emph{A. thaliana}. Teilabbildungen \textbf{b} und \textbf{c} zeigen die gravitrope Wirkungsweise von Statolithen, die auf Umlagerung der Amyloplasten bei Veränderung des Schwerkraftvektors beruht. \label{Statolithen}}
-		\end{figure} 
+\visible<2->{		
+	\begin{figure}[H]
+		\centering 
+		\includegraphics[width = 0.75\linewidth]{images/Statolithen2.png}
+		\caption{Statolithen \parencite[345]{Chen1999}. Teilabbildung \textbf{a} zeigt eine Mikroskopaufnahme von Statolithen bei \emph{A. thaliana}. Teilabbildungen \textbf{b} und \textbf{c} zeigen die gravitrope Wirkungsweise von Statolithen, die auf Umlagerung der Amyloplasten bei Veränderung des Schwerkraftvektors beruht. \label{Statolithen}}
+\end{figure} }
+
 	\end{frame}
 
 % \begin{frame}[<+(1)->]
@@ -165,8 +178,9 @@ style=authoryear-ibid,
 	\begin{itemize}
 		\item Feld entsteht durch Ionenbewegung (\textbf{apoplastischer Strom})
 		\item Bei veränderter Pflanzenlage ändert sich die Ionenbewegung und damit das Feld
+		\item Aufnahme des entstandenen Signals in der Streckungszone hinter der Wurzelspitze
 	\end{itemize}
-	\item Aufnahme des entstandenen Signals in der Streckungszone hinter der Wurzelspitze
+	
 	\item Einsetzung der Krümmung beim Ankommen des Signals (ungleiches Wachsen der Flanken)
 \end{enumerate}
 \end{frame}
@@ -180,6 +194,7 @@ style=authoryear-ibid,
 %			\includegraphics[width = 0.3\linewidth]{images/newdiff.pdf}
 %			\caption{Flanken wachsen ungleich (differenziell) nach der Signaltransduktion. Linkes Bild: Flanken gleich groß (blau); rechtes Bild: unterschiedliche Größe der Flanken (rot und orange).}
 %		\end{figure} 
+\visible<2->{
 \begin{figure}
 	\begin{minipage}[c]{0.4\textwidth}
 		\centering
@@ -190,6 +205,7 @@ style=authoryear-ibid,
 		\caption{Flanken wachsen ungleich (differenziell) nach der Signaltransduktion. Linkes Bild: Flanken gleich groß (blau); rechtes Bild: unterschiedliche Größe der Flanken (rot und orange).} \label{diffwachs}
 	\end{minipage}
 \end{figure}
+}
 
 \begin{itemize}
 	\item Wachstumssteuerung durch Auxine und Gibberelline (Pflanzenhormone)
@@ -221,7 +237,8 @@ style=authoryear-ibid,
 	
 \begin{frame}[<+(1)->]
 \frametitle{Experimenteller Teil--Gliederung}
-		
+\pause
+\trickbeamer		
 \tableofcontents[currentsection, sections=2, pausesections, pausesubsections, subsectionstyle=show/show/shaded, subsubsectionstyle=show/show/show/shaded]
 		
 % \begin{enumerate}
@@ -242,14 +259,14 @@ style=authoryear-ibid,
 	
 	\subsection{Methoden}
 	
-	\begin{frame}[<+(1)->]
+	\visible<2->{	\begin{frame}[<+(1)->]
 		\frametitle{Methoden}
 		\begin{figure}[H]
 			\centering 
 			\includegraphics[width = 0.5\linewidth]{images/IMG_1044.JPG}
 			\caption{Vorbereitung des Experiments und vollständig aufgebautes Klinostat.\label{Klinostat2}}
-		\end{figure}
-		
+	\end{figure}}
+	
 	\end{frame}
 	
 	\subsubsection{Pflanzen, Material und Geräte}
@@ -272,16 +289,16 @@ style=authoryear-ibid,
 % 	\caption{Schematische Konstruktion des selbst gebauten Klinostats (seitliche Ansicht).}
 % 	\end{figure} 
 
-\begin{figure}
-	\begin{minipage}[c]{0.49\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{images/drawing-1.pdf}
-	\end{minipage}\hfill
-	\begin{minipage}[c]{0.49\textwidth}
-		\centering
-		\caption{Schematische Konstruktion des selbst gebauten Klinostats (seitliche Ansicht). \\\textbf{1}: \textbf{Befestigungsplatte} (Holz, Dicke: 2cm)\\ \textbf{2}: \textbf{Netzteil} (Modell: MW1000GS, Eingang: 230V~50Hz 28W, Ausgang: 3-6-9-12V, 1000mA 12VA(max))\\ \textbf{3}: \textbf{Holzkeil}, um die Drehachse des Motors um ca. \ang{15} senkrecht zur Ebene anzuheben\\ \textbf{4}: \textbf{Motorbefestigung}\\ \textbf{5}: \textbf{Elektrogetriebemotor} MFA/Como Drills 919D SERIES, single ratio gearbox 3000:1 (Untersetzung 3000:1), 4.5 - 15V DC\\ \textbf{6}: \textbf{Elektromotorwelle}\\\textbf{7}: leere \textbf{Blechdose} mit Öffnung (wird mit einer Muffe an die Elektromotorwelle befestigt)\label{Klinstat1}.} 
-	\end{minipage}
-\end{figure}
+\visible<2->{\begin{figure}
+		\begin{minipage}[c]{0.49\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{images/drawing-1.pdf}
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.49\textwidth}
+			\centering
+			\caption{Schematische Konstruktion des selbst gebauten Klinostats (seitliche Ansicht). \\\textbf{1}: \textbf{Befestigungsplatte} (Holz, Dicke: 2cm)\\ \textbf{2}: \textbf{Netzteil} (Modell: MW1000GS, Eingang: 230V~50Hz 28W, Ausgang: 3-6-9-12V, 1000mA 12VA(max))\\ \textbf{3}: \textbf{Holzkeil}, um die Drehachse des Motors um ca. \ang{15} senkrecht zur Ebene anzuheben\\ \textbf{4}: \textbf{Motorbefestigung}\\ \textbf{5}: \textbf{Elektrogetriebemotor} MFA/Como Drills 919D SERIES, single ratio gearbox 3000:1 (Untersetzung 3000:1), 4.5 - 15V DC\\ \textbf{6}: \textbf{Elektromotorwelle}\\\textbf{7}: leere \textbf{Blechdose} mit Öffnung (wird mit einer Muffe an die Elektromotorwelle befestigt)\label{Klinstat1}.} 
+		\end{minipage}
+\end{figure}}
 
 \end{frame}
 	
